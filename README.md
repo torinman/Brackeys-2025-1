@@ -5,6 +5,3 @@
 ### Also, Upsideout is on Youtube making his own game. [Check it out!](https://www.youtube.com/@Upside-out) Very cool!
 
 Torinman also has some amazing 3d models
-
-### Also, Upsideout is on Youtube making his own game. [Check it out!](https://www.youtube.com/@Upside-out) Very very cool!
-
