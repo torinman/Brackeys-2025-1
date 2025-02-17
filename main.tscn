@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8t6sspi5hml8"]
+[gd_scene load_steps=3 format=3 uid="uid://c8t6sspi5hml8"]
 
-[ext_resource type="Texture2D" uid="uid://c4tbjldui787b" path="res://icon.svg" id="1_8okwa"]
+[ext_resource type="Texture2D" uid="uid://c4tbjldui787b" path="res://textures/icon.svg" id="1_8okwa"]
+[ext_resource type="Texture2D" uid="uid://cagbg22yq8pfo" path="res://textures/New Piskel.png" id="2_jn8io"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="HI LEO!" type="Sprite2D" parent="."]
 position = Vector2(1025, 523)
 texture = ExtResource("1_8okwa")
+
+[node name="NewPiskel" type="Sprite2D" parent="."]
+position = Vector2(1038, 793)
+texture = ExtResource("2_jn8io")
