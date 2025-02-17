@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8t6sspi5hml8"]
+[gd_scene load_steps=5 format=3 uid="uid://c8t6sspi5hml8"]
 
 [ext_resource type="Texture2D" uid="uid://c4tbjldui787b" path="res://textures/icon.svg" id="1_8okwa"]
+[ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_oj6jv"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="2_b7lil"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_oj6jv")
+
 [node name="HI LEO!" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(231, 190)
 texture = ExtResource("1_8okwa")
 
