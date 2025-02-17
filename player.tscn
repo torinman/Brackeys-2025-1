@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://vbfocsu18cfj"]
+
+[ext_resource type="Script" path="res://Playerphysics.gd" id="1_4rmmc"]
+[ext_resource type="Texture2D" uid="uid://c4tbjldui787b" path="res://textures/icon.svg" id="2_d1fve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scyfp"]
+size = Vector2(20, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8x6p4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d1fve")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4rmmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_scyfp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_8x6p4")
