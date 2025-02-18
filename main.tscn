@@ -19,9 +19,9 @@ position = Vector2(95, 97)
 position = Vector2(320, 180)
 texture = ExtResource("3_rg0s1")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Frame"]
+[node name="FrameBody" type="StaticBody2D" parent="Frame"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
 
 [node name="Jar" parent="." instance=ExtResource("4_1bm73")]

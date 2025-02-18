@@ -11,7 +11,11 @@ func _process(delta):
 	pass
 
 
+func smash():
+	pass
 
 
 func _on_body_entered(body):
-	print("HIIIII") # Replace with function body.
+	if body.name == "FrameBody":
+		smash()
+ 
