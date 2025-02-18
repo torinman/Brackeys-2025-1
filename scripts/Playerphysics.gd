@@ -13,6 +13,8 @@ const V_JUMP_START = -150
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var since_ground = V_JUMP_DELAY
 
+var push_force = 20.0
+
 func _physics_process(delta):
 	since_ground += delta
 	# Add the gravity.
@@ -55,3 +57,7 @@ func _physics_process(delta):
 		animated_sprite_2d.play("idle")
 	
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
