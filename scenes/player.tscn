@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://vbfocsu18cfj"]
+[gd_scene load_steps=15 format=3 uid="uid://bpeu6jm4rwq7t"]
 
 [ext_resource type="Script" path="res://scripts/Playerphysics.gd" id="1_4rmmc"]
 [ext_resource type="Texture2D" uid="uid://i6163b70txtt" path="res://textures/player.png" id="2_kmb6c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_scyfp"]
-size = Vector2(20, 36)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ynh36"]
+radius = 13.0
+height = 40.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd7w7"]
 atlas = ExtResource("2_kmb6c")
@@ -105,9 +106,10 @@ animations = [{
 script = ExtResource("1_4rmmc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_scyfp")
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_ynh36")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_16lf6")
-animation = &"run"
+animation = &"fall"

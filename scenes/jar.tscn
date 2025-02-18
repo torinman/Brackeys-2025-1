@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://duob7t0ku6fxr"]
+
+[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
+friction = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
+atlas = ExtResource("1_sav3e")
+region = Rect2(9, 14, 33, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jd2u"]
+size = Vector2(34, 36)
+
+[node name="Jar" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(22, 0)
+mass = 0.58
+physics_material_override = SubResource("PhysicsMaterial_6e3qc")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = SubResource("AtlasTexture_f7vhs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_0jd2u")

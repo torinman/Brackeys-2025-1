@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8t6sspi5hml8"]
 
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_oj6jv"]
-[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="2_b7lil"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
-[ext_resource type="PackedScene" uid="uid://vbfocsu18cfj" path="res://scenes/player.tscn" id="3_vvq26"]
+[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_vvq26"]
+[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="4_1bm73"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,9 +11,8 @@
 position = Vector2(320, 180)
 texture = ExtResource("1_oj6jv")
 
-[node name="Jar" type="Sprite2D" parent="."]
-position = Vector2(567, 355)
-texture = ExtResource("2_b7lil")
+[node name="player" parent="." instance=ExtResource("3_vvq26")]
+position = Vector2(95, 97)
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -24,5 +23,5 @@ texture = ExtResource("3_rg0s1")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/StaticBody2D"]
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
 
-[node name="player" parent="." instance=ExtResource("3_vvq26")]
-position = Vector2(95, 97)
+[node name="Jar" parent="." instance=ExtResource("4_1bm73")]
+position = Vector2(525, 299)
