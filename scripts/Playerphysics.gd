@@ -8,7 +8,7 @@ const AIR_FRIC = 0.89
 const V_JUMP_DELAY = 0.1
 const V_JUMP_START = -150
 @onready var animated_sprite_2d = $AnimatedSprite2D
-
+var push_force = 50.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var since_ground = V_JUMP_DELAY

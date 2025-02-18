@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
-friction = 0.33
+friction = 0.5
 bounce = 1.0
 absorbent = true
 
@@ -19,6 +19,8 @@ size = Vector2(34, 36)
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(22, 0)
 mass = 0.58
+collision_layer = 2
+collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_6e3qc")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]

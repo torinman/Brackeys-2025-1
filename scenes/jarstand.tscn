@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbrwgxseqatd"]
+
+[ext_resource type="Texture2D" uid="uid://pgtdbwvm3ywr" path="res://textures/jarstand.png" id="1_i7jk8"]
+
+[node name="Jarstand" type="Sprite2D"]
+position = Vector2(0, -20)
+texture = ExtResource("1_i7jk8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-17, -20, -20, -17, -20, 20, 20, 20, 20, -17, 17, -20)
