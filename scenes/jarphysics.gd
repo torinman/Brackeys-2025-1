@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+@export var scentetoinstantiate: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +13,11 @@ func _process(delta):
 
 
 func smash():
-	pass
+	var new_scene = scentetoinstantiate.instantiate()
+	new_scene.position = get_node(".").position + Vector2(0, -5)
+	new_scene.rotation = get_node(".").rotation
+	add_sibling(new_scene)
+	queue_free()
 
 
 func _on_body_entered(body):

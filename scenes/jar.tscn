@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://duob7t0ku6fxr"]
+[gd_scene load_steps=6 format=3 uid="uid://duob7t0ku6fxr"]
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
+[ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="2_u3djk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
 friction = 0.13
@@ -21,11 +22,14 @@ physics_material_override = SubResource("PhysicsMaterial_6e3qc")
 max_contacts_reported = 20
 contact_monitor = true
 script = ExtResource("1_6kfej")
+scentetoinstantiate = ExtResource("2_u3djk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Jar"]
+position = Vector2(-22, 0)
 texture = SubResource("AtlasTexture_f7vhs")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar"]
+position = Vector2(-22, 0)
 polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
 
 [connection signal="body_entered" from="Jar" to="Jar" method="_on_body_entered"]

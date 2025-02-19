@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://danjl6hnmti6"]
+
+[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_lefyo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1kck7"]
+friction = 0.67
+bounce = 0.76
+absorbent = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1unii"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(61, 82, 21, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4jpt"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(120, 84, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o3ml"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(29, 127, 11, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1w80"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(11, 75, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhubl"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(111, 22, 29, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i56d"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(59, 14, 33, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utnt3"]
+atlas = ExtResource("1_lefyo")
+region = Rect2(9, 14, 33, 36)
+
+[node name="Smash" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(-6, 12)
+texture = SubResource("AtlasTexture_1unii")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+position = Vector2(-6, 12)
+polygon = PackedVector2Array(-10, 8, -9, 9, -1, 9, 10, -6, 8, -9, 7, -9, -10, 0)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+position = Vector2(4, 13)
+texture = SubResource("AtlasTexture_j4jpt")
+offset = Vector2(0.5, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2"]
+position = Vector2(8, 13)
+polygon = PackedVector2Array(6, 8, 6, 0, -2, -8, -14, 8)
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+position = Vector2(10, 4)
+texture = SubResource("AtlasTexture_6o3ml")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D3"]
+position = Vector2(9, -9)
+polygon = PackedVector2Array(6, 5, -4, 10, -4, 11, 6, 21)
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+position = Vector2(-8, 2)
+texture = SubResource("AtlasTexture_y1w80")
+offset = Vector2(0, 0.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D4"]
+position = Vector2(7, -22)
+polygon = PackedVector2Array(-7, 24, -23, 16, -23, 23.181, -23, 33)
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D5"]
+position = Vector2(0, -5)
+texture = SubResource("AtlasTexture_xhubl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D5"]
+position = Vector2(17, -31)
+polygon = PackedVector2Array(-3, 20, -31, 20, -31, 24, -16, 32, -15, 32, -3, 26)
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+mass = 2.64
+physics_material_override = SubResource("PhysicsMaterial_1kck7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D6"]
+position = Vector2(0, -16)
+texture = SubResource("AtlasTexture_0i56d")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D6"]
+position = Vector2(17, -41)
+polygon = PackedVector2Array(-1, 21, -33, 21, -33, 29, -1, 29)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.509804)
+texture = SubResource("AtlasTexture_utnt3")
