@@ -13,7 +13,7 @@ position = Vector2(320, 180)
 texture = ExtResource("1_oj6jv")
 
 [node name="player" parent="." instance=ExtResource("3_vvq26")]
-position = Vector2(95, 97)
+position = Vector2(53, 261)
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -25,7 +25,7 @@ texture = ExtResource("3_rg0s1")
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
 
 [node name="Jar" parent="." instance=ExtResource("4_1bm73")]
-position = Vector2(519, 51)
+position = Vector2(524, 268)
 
 [node name="Jarstand" parent="." instance=ExtResource("5_vlhdt")]
 position = Vector2(524, 308)
