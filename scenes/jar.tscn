@@ -1,28 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://duob7t0ku6fxr"]
 
+[ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
-friction = 0.5
-bounce = 1.0
+friction = 0.13
+bounce = 0.97
 absorbent = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
 atlas = ExtResource("1_sav3e")
 region = Rect2(9, 14, 33, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jd2u"]
-size = Vector2(34, 36)
-
 [node name="Jar" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-collision_layer = 2
-collision_mask = 3
+[node name="Jar" type="RigidBody2D" parent="."]
+position = Vector2(22, 0)
+mass = 0.58
 physics_material_override = SubResource("PhysicsMaterial_6e3qc")
+max_contacts_reported = 20
+contact_monitor = true
+script = ExtResource("1_6kfej")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Jar"]
 texture = SubResource("AtlasTexture_f7vhs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("RectangleShape2D_0jd2u")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar"]
+polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
+
+[connection signal="body_entered" from="Jar" to="Jar" method="_on_body_entered"]

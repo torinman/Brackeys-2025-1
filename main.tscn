@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_vvq26"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="4_1bm73"]
-[ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="5_b4hv1"]
+[ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="5_vlhdt"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,13 +19,13 @@ position = Vector2(95, 97)
 position = Vector2(320, 180)
 texture = ExtResource("3_rg0s1")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Frame"]
+[node name="FrameBody" type="StaticBody2D" parent="Frame"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
 
 [node name="Jar" parent="." instance=ExtResource("4_1bm73")]
-position = Vector2(525, 272)
+position = Vector2(503, 51)
 
-[node name="Jarstand" parent="." instance=ExtResource("5_b4hv1")]
-position = Vector2(525, 310)
+[node name="Jarstand" parent="." instance=ExtResource("5_vlhdt")]
+position = Vector2(524, 308)
