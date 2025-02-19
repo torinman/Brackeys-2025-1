@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8t6sspi5hml8"]
+[gd_scene load_steps=5 format=3 uid="uid://c8t6sspi5hml8"]
 
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_oj6jv"]
+[ext_resource type="PackedScene" uid="uid://dw083nhkfs1e8" path="res://scenes/levels/level_1.tscn" id="2_wlcd6"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
-[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_vvq26"]
-[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="4_1bm73"]
-[ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="5_vlhdt"]
 [ext_resource type="AudioStream" uid="uid://bolempyy13kml" path="res://audio/loraxlessonopening.ogg" id="6_fhc1h"]
 
 [node name="Node2D" type="Node2D"]
@@ -13,14 +11,7 @@
 position = Vector2(320, 180)
 texture = ExtResource("1_oj6jv")
 
-[node name="player" parent="." instance=ExtResource("3_vvq26")]
-position = Vector2(53, 261)
-
-[node name="Jar" parent="." instance=ExtResource("4_1bm73")]
-position = Vector2(524, 268)
-
-[node name="Jarstand" parent="." instance=ExtResource("5_vlhdt")]
-position = Vector2(524, 308)
+[node name="level 1" parent="." instance=ExtResource("2_wlcd6")]
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
