@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw083nhkfs1e8"]
+
+[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="1_endrc"]
+[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="2_gsib3"]
+[ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="3_gf1ef"]
+
+[node name="level 1" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_endrc")]
+position = Vector2(79, 264)
+
+[node name="Jar" parent="." instance=ExtResource("2_gsib3")]
+position = Vector2(524, 270)
+
+[node name="Jarstand" parent="." instance=ExtResource("3_gf1ef")]
+position = Vector2(524, 308)
