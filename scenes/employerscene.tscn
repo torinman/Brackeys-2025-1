@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://d25mentlkp5m5"]
+
+[ext_resource type="Texture2D" uid="uid://cemfht5vrpgyq" path="res://textures/employer.png" id="1_rwq40"]
+[ext_resource type="Script" path="res://scenes/employerscene.gd" id="2_gwowv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_civ4b"]
+atlas = ExtResource("1_rwq40")
+region = Rect2(0, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18gf5"]
+atlas = ExtResource("1_rwq40")
+region = Rect2(640, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5m6j"]
+atlas = ExtResource("1_rwq40")
+region = Rect2(0, 0, 640, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l506x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_civ4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18gf5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5m6j")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(320, 180)
+sprite_frames = SubResource("SpriteFrames_l506x")
+frame_progress = 0.776323
+script = ExtResource("2_gwowv")

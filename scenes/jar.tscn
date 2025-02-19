@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
-[ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="2_u3djk"]
+[ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="2_u3djk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
 friction = 0.13
