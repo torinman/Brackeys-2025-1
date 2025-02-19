@@ -25,7 +25,7 @@ texture = ExtResource("3_rg0s1")
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
 
 [node name="Jar" parent="." instance=ExtResource("4_1bm73")]
-position = Vector2(503, 51)
+position = Vector2(519, 51)
 
 [node name="Jarstand" parent="." instance=ExtResource("5_vlhdt")]
 position = Vector2(524, 308)
