@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8t6sspi5hml8"]
+[gd_scene load_steps=7 format=3 uid="uid://c8t6sspi5hml8"]
 
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_oj6jv"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_vvq26"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="4_1bm73"]
 [ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="5_vlhdt"]
+[ext_resource type="AudioStream" uid="uid://bolempyy13kml" path="res://audio/loraxlessonopening.ogg" id="6_fhc1h"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,3 +30,7 @@ texture = ExtResource("3_rg0s1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 179, 298, 150, 298, -157, 298, -157, 298, -158, -298, -158, -298, 150, 298, 150)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fhc1h")
+autoplay = true
