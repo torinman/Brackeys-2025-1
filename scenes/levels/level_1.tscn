@@ -1,14 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://d33vewd71oyol"]
+[gd_scene load_steps=18 format=3 uid="uid://dw083nhkfs1e8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_lm3e6"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_scjm6"]
-[ext_resource type="PackedScene" uid="uid://dnrjhc0xxiw74" path="res://scenes/jarstand.tscn" id="2_8c71b"]
+[ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="2_8c71b"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_xlm4s"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="4_qphl6"]
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="6_dvlr5"]
-[ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="7_fqssy"]
+[ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="7_fqssy"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_jco8u"]
-[ext_resource type="AudioStream" uid="uid://l2232fuv76d3" path="res://audio/lorax_lesson_opening.ogg" id="9_s5etl"]
+[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="9_bvl2b"]
+[ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_odq21"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aih3a"]
 resource_local_to_scene = true
@@ -19,6 +20,26 @@ absorbent = true
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
 atlas = ExtResource("8_jco8u")
 region = Rect2(9, 14, 33, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
+atlas = ExtResource("10_odq21")
+region = Rect2(1, 2, 61, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlcqw"]
+atlas = ExtResource("10_odq21")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1k7k"]
+atlas = ExtResource("10_odq21")
+region = Rect2(137, 19, 36, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_736hv"]
+atlas = ExtResource("10_odq21")
+region = Rect2(197, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi4gv"]
+atlas = ExtResource("10_odq21")
+region = Rect2(264, 0, 56, 63)
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_lm3e6")
@@ -65,7 +86,32 @@ position = Vector2(-1, 5)
 polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -163, -296, -163, -317, -177, 321, -177, 321, 183, -319, 183)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_s5etl")
+stream = ExtResource("9_bvl2b")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(460, 266)
+texture = SubResource("AtlasTexture_bpreq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(517, 237)
+texture = SubResource("AtlasTexture_wlcqw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(572, 269)
+rotation = 1.5708
+texture = SubResource("AtlasTexture_i1k7k")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(583, 217)
+texture = SubResource("AtlasTexture_736hv")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(516, 197)
+texture = SubResource("AtlasTexture_i1k7k")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(472, 174)
+texture = SubResource("AtlasTexture_vi4gv")
 
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]

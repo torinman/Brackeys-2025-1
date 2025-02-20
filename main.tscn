@@ -1,12 +1,33 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8t6sspi5hml8"]
+[gd_scene load_steps=14 format=3 uid="uid://c8t6sspi5hml8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_fdwik"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_oj6jv"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_fee5y"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="3_rg0s1"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="4_kl6xl"]
-[ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="5_etto1"]
+[ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="5_etto1"]
 [ext_resource type="AudioStream" uid="uid://bolempyy13kml" path="res://audio/loraxlessonopening.ogg" id="6_fhc1h"]
+[ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="8_4xjqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6u35"]
+atlas = ExtResource("8_4xjqd")
+region = Rect2(1, 2, 61, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kjxk"]
+atlas = ExtResource("8_4xjqd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pohi6"]
+atlas = ExtResource("8_4xjqd")
+region = Rect2(137, 19, 36, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuatp"]
+atlas = ExtResource("8_4xjqd")
+region = Rect2(197, 0, 50, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggkpe"]
+atlas = ExtResource("8_4xjqd")
+region = Rect2(264, 0, 56, 63)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fdwik")
@@ -36,3 +57,28 @@ polygon = PackedVector2Array(320, 180, -320, 180, -320, -180, 320, -180, 320, 17
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_fhc1h")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(469, 268)
+texture = SubResource("AtlasTexture_e6u35")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(524, 237)
+texture = SubResource("AtlasTexture_2kjxk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(572, 269)
+rotation = 1.5708
+texture = SubResource("AtlasTexture_pohi6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(583, 217)
+texture = SubResource("AtlasTexture_iuatp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(521, 196)
+texture = SubResource("AtlasTexture_pohi6")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(472, 174)
+texture = SubResource("AtlasTexture_ggkpe")
