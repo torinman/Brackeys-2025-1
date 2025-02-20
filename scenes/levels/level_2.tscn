@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://veg4twysbb72"]
+[gd_scene load_steps=12 format=3 uid="uid://veg4twysbb72"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_pluqq"]
 [ext_resource type="PackedScene" uid="uid://dnrjhc0xxiw74" path="res://scenes/jarstand.tscn" id="2_atn5q"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="6_fcwm4"]
 [ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="7_h1l3b"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_brlv5"]
+[ext_resource type="AudioStream" uid="uid://l2232fuv76d3" path="res://audio/lorax_lesson_opening.ogg" id="9_2vkeb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_adyjk"]
 resource_local_to_scene = true
@@ -28,13 +29,43 @@ position = Vector2(320, 180)
 texture = ExtResource("2_htpek")
 
 [node name="Jarstand" parent="." instance=ExtResource("2_atn5q")]
-position = Vector2(322, 306)
+position = Vector2(322, 111)
+
+[node name="Jarstand2" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(363, 151)
+
+[node name="Jarstand3" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(282, 151)
+
+[node name="Jarstand4" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(241, 190)
+
+[node name="Jarstand8" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(201, 229)
+
+[node name="Jarstand9" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(160, 268)
+
+[node name="Jarstand11" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(120, 308)
+
+[node name="Jarstand5" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(403, 190)
+
+[node name="Jarstand6" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(443, 229)
+
+[node name="Jarstand7" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(483, 268)
+
+[node name="Jarstand10" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(524, 308)
 
 [node name="player" parent="." instance=ExtResource("3_l43rh")]
 position = Vector2(53, 301)
 
 [node name="Jar" type="Node2D" parent="."]
-position = Vector2(323, 267)
+position = Vector2(323, 70)
 script = ExtResource("6_fcwm4")
 scentetoinstantiate = ExtResource("7_h1l3b")
 
@@ -60,7 +91,11 @@ texture = ExtResource("5_g83y2")
 [node name="FrameBody" type="StaticBody2D" parent="Frame"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
-position = Vector2(-1, -3)
-polygon = PackedVector2Array(-319, -178, -295, -154, -295, 150, 297, 150, 297, -153, -293, -153, -317, -177, 321, -177, 321, 183, -319, 183)
+position = Vector2(-1, -2)
+polygon = PackedVector2Array(-319, -178, -297, -156, -297, 152, 299, 152, 299, -156, -296, -156, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_2vkeb")
+autoplay = true
 
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]

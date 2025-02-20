@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d33vewd71oyol"]
+[gd_scene load_steps=12 format=3 uid="uid://d33vewd71oyol"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_lm3e6"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_scjm6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="6_dvlr5"]
 [ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="7_fqssy"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_jco8u"]
+[ext_resource type="AudioStream" uid="uid://l2232fuv76d3" path="res://audio/lorax_lesson_opening.ogg" id="9_s5etl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aih3a"]
 resource_local_to_scene = true
@@ -60,7 +61,11 @@ texture = ExtResource("4_qphl6")
 [node name="FrameBody" type="StaticBody2D" parent="Frame"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
-position = Vector2(-1, -3)
-polygon = PackedVector2Array(-319, -178, -295, -154, -295, 150, 297, 150, 297, -153, -293, -153, -317, -177, 321, -177, 321, 183, -319, 183)
+position = Vector2(-1, 5)
+polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -163, -296, -163, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_s5etl")
+autoplay = true
 
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]
