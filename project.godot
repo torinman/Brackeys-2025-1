@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys-2025-1"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/levels/level_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://textures/icon.svg"
 
@@ -30,6 +30,7 @@ directories/dtl_directory={
 layout/style_list=["res://textboxstyle.tres"]
 layout/default_style="res://textboxstyle.tres"
 variables={}
+glossary/default_case_sensitive=true
 
 [display]
 
