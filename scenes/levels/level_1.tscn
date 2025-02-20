@@ -1,16 +1,66 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw083nhkfs1e8"]
+[gd_scene load_steps=11 format=3 uid="uid://d33vewd71oyol"]
 
-[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="1_endrc"]
-[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="2_gsib3"]
-[ext_resource type="PackedScene" path="res://scenes/jarstand.tscn" id="3_gf1ef"]
+[ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_lm3e6"]
+[ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_scjm6"]
+[ext_resource type="PackedScene" uid="uid://dnrjhc0xxiw74" path="res://scenes/jarstand.tscn" id="2_8c71b"]
+[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_xlm4s"]
+[ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="4_qphl6"]
+[ext_resource type="Script" path="res://scenes/jarphysics.gd" id="6_dvlr5"]
+[ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="7_fqssy"]
+[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_jco8u"]
 
-[node name="level 1" type="Node2D"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aih3a"]
+resource_local_to_scene = true
+friction = 0.13
+bounce = 0.97
+absorbent = true
 
-[node name="player" parent="." instance=ExtResource("1_endrc")]
-position = Vector2(79, 264)
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
+atlas = ExtResource("8_jco8u")
+region = Rect2(9, 14, 33, 36)
 
-[node name="Jar" parent="." instance=ExtResource("2_gsib3")]
-position = Vector2(524, 270)
+[node name="Level 1" type="Node2D"]
+script = ExtResource("1_lm3e6")
+nextlevel = "res://scenes/levels/level_2.tscn"
 
-[node name="Jarstand" parent="." instance=ExtResource("3_gf1ef")]
-position = Vector2(524, 308)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_scjm6")
+
+[node name="Jarstand" parent="." instance=ExtResource("2_8c71b")]
+position = Vector2(519, 308)
+
+[node name="player" parent="." instance=ExtResource("3_xlm4s")]
+position = Vector2(53, 301)
+
+[node name="Jar" type="Node2D" parent="."]
+position = Vector2(519, 268)
+script = ExtResource("6_dvlr5")
+scentetoinstantiate = ExtResource("7_fqssy")
+
+[node name="Jar" type="RigidBody2D" parent="Jar"]
+position = Vector2(22, 0)
+mass = 0.58
+physics_material_override = SubResource("PhysicsMaterial_aih3a")
+max_contacts_reported = 20
+contact_monitor = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+texture = SubResource("AtlasTexture_f7vhs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("4_qphl6")
+
+[node name="FrameBody" type="StaticBody2D" parent="Frame"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
+position = Vector2(-1, -3)
+polygon = PackedVector2Array(-319, -178, -295, -154, -295, 150, 297, 150, 297, -153, -293, -153, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]

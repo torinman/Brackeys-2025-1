@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://danjl6hnmti6"]
+[gd_scene load_steps=14 format=3 uid="uid://danjl6hnmti6"]
 
+[ext_resource type="Script" path="res://scenes/smash.gd" id="1_dukrf"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_lefyo"]
 [ext_resource type="AudioStream" uid="uid://wgcm85ta2prp" path="res://audio/glass-breaking-99389.mp3" id="2_jj051"]
 [ext_resource type="Texture2D" uid="uid://bswscpidvh0ve" path="res://textures/purple thingies v1 leofixthisplease.png" id="2_pidmc"]
@@ -44,6 +45,7 @@ _data = [Vector2(0, 360), 0.0, 0.0, 0, 0, Vector2(0.0842697, -360), 0.0, 0.0, 0,
 point_count = 4
 
 [node name="Smash" type="Node2D"]
+script = ExtResource("1_dukrf")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 mass = 2.64

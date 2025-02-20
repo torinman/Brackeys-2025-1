@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
-[ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="2_u3djk"]
+[ext_resource type="PackedScene" uid="uid://danjl6hnmti6" path="res://scenes/smash.tscn" id="2_u3djk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
+resource_local_to_scene = true
 friction = 0.13
 bounce = 0.97
 absorbent = true
@@ -14,6 +15,8 @@ atlas = ExtResource("1_sav3e")
 region = Rect2(9, 14, 33, 36)
 
 [node name="Jar" type="Node2D"]
+script = ExtResource("1_6kfej")
+scentetoinstantiate = ExtResource("2_u3djk")
 
 [node name="Jar" type="RigidBody2D" parent="."]
 position = Vector2(22, 0)
@@ -21,8 +24,6 @@ mass = 0.58
 physics_material_override = SubResource("PhysicsMaterial_6e3qc")
 max_contacts_reported = 20
 contact_monitor = true
-script = ExtResource("1_6kfej")
-scentetoinstantiate = ExtResource("2_u3djk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Jar"]
 position = Vector2(-22, 0)
@@ -32,4 +33,4 @@ texture = SubResource("AtlasTexture_f7vhs")
 position = Vector2(-22, 0)
 polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
 
-[connection signal="body_entered" from="Jar" to="Jar" method="_on_body_entered"]
+[connection signal="body_entered" from="Jar" to="." method="_on_body_entered"]
