@@ -40,5 +40,5 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_l506x")
-frame_progress = 0.776323
+frame_progress = 0.374994
 script = ExtResource("2_gwowv")
