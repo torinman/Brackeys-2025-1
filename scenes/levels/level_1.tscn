@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dw083nhkfs1e8"]
+[gd_scene load_steps=31 format=3 uid="uid://dw083nhkfs1e8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_lm3e6"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_scjm6"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="9_ttvxg"]
 [ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_odq21"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_fchn2"]
+[ext_resource type="Texture2D" uid="uid://dfystxic3sawr" path="res://globby.png" id="12_kngpx"]
+[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="12_q4mnd"]
+[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="14_stsko"]
+[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="15_skv1d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
 atlas = ExtResource("10_odq21")
@@ -29,6 +33,74 @@ region = Rect2(197, 0, 50, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vi4gv"]
 atlas = ExtResource("10_odq21")
 region = Rect2(264, 0, 56, 63)
+
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdkf8"]
+resource_local_to_scene = true
+friction = 0.13
+bounce = 0.97
+absorbent = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0qgd"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqk8l"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4bph"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gwiu"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u452s"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8n88"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_142fy"]
+atlas = ExtResource("12_kngpx")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y401d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0qgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqk8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4bph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gwiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u452s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8n88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_142fy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
+atlas = ExtResource("8_jco8u")
+region = Rect2(9, 14, 33, 36)
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_lm3e6")
@@ -83,6 +155,45 @@ polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -
 stream = ExtResource("9_bvl2b")
 autoplay = true
 script = ExtResource("11_fchn2")
-
 [node name="Jar" parent="." instance=ExtResource("9_ttvxg")]
 position = Vector2(520, 269)
+[node name="Laser" parent="." instance=ExtResource("12_q4mnd")]
+position = Vector2(291, 83)
+
+[node name="Jar" type="Node2D" parent="."]
+position = Vector2(519, 270)
+script = ExtResource("6_dvlr5")
+scentetoinstantiate = ExtResource("7_fqssy")
+
+[node name="Jar" type="RigidBody2D" parent="Jar"]
+position = Vector2(22, 0)
+mass = 0.58
+physics_material_override = SubResource("PhysicsMaterial_vdkf8")
+max_contacts_reported = 20
+contact_monitor = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jar/Jar"]
+position = Vector2(-23, -4)
+scale = Vector2(0.875, 0.875)
+sprite_frames = SubResource("SpriteFrames_y401d")
+autoplay = "default"
+frame_progress = 0.593726
+
+[node name="Sprite2D" type="Sprite2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+texture = SubResource("AtlasTexture_f7vhs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("14_stsko")]
+position = Vector2(223, 314)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("15_skv1d")]
+position = Vector2(271, 298)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("14_stsko")]
+position = Vector2(287, 250)
+
+[connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]

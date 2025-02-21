@@ -1,9 +1,67 @@
-[gd_scene load_steps=7 format=3 uid="uid://duob7t0ku6fxr"]
+[gd_scene load_steps=15 format=3 uid="uid://duob7t0ku6fxr"]
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
 [ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="2_u3djk"]
 [ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="4_b4j66"]
+[ext_resource type="Texture2D" uid="uid://dfystxic3sawr" path="res://globby.png" id="3_kat1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0qgd"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqk8l"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4bph"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gwiu"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u452s"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8n88"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_142fy"]
+atlas = ExtResource("3_kat1l")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y401d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0qgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqk8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4bph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gwiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u452s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8n88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_142fy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
 resource_local_to_scene = true
@@ -18,6 +76,13 @@ region = Rect2(9, 14, 33, 36)
 [node name="Jar" type="Node2D"]
 script = ExtResource("1_6kfej")
 scentetoinstantiate = ExtResource("2_u3djk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -4)
+scale = Vector2(0.875, 0.875)
+sprite_frames = SubResource("SpriteFrames_y401d")
+autoplay = "default"
+frame_progress = 0.727887
 
 [node name="Jar" type="RigidBody2D" parent="."]
 position = Vector2(22, 0)

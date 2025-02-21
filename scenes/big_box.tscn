@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ceev3lmyk7r1i"]
 
+[ext_resource type="Texture2D" uid="uid://bbn1v26e46to1" path="res://bigbox.png" id="1_4rt1u"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qw2sy"]
 friction = 0.36
 absorbent = true
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xnqkx"]
-size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t62fh"]
 size = Vector2(64, 64)
@@ -17,7 +16,7 @@ mass = 2.59
 physics_material_override = SubResource("PhysicsMaterial_qw2sy")
 
 [node name="Sprite2D" type="Sprite2D" parent="bigbox"]
-texture = SubResource("PlaceholderTexture2D_xnqkx")
+texture = ExtResource("1_4rt1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bigbox"]
 shape = SubResource("RectangleShape2D_t62fh")
