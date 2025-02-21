@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://0qjuom07ofg6"]
+[gd_scene load_steps=15 format=3 uid="uid://0qjuom07ofg6"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_pluqq"]
 [ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="2_atn5q"]
@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_gi68x"]
 [ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_wowln"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_3qv4f"]
+[ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="11_3v6du"]
 [ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="11_sfcjm"]
+[ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="12_buo54"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohin5"]
 atlas = ExtResource("10_wowln")
@@ -98,3 +100,231 @@ position = Vector2(356, 72)
 
 [node name="Box" parent="." instance=ExtResource("11_sfcjm")]
 position = Vector2(316, 73)
+
+[node name="Jarstandmiddle" type="Sprite2D" parent="."]
+position = Vector2(120, 308)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle2" type="Sprite2D" parent="."]
+position = Vector2(160, 268)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle3" type="Sprite2D" parent="."]
+position = Vector2(160, 280)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle4" type="Sprite2D" parent="."]
+position = Vector2(160, 292)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle5" type="Sprite2D" parent="."]
+position = Vector2(160, 304)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle6" type="Sprite2D" parent="."]
+position = Vector2(160, 308)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle7" type="Sprite2D" parent="."]
+position = Vector2(201, 229)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle8" type="Sprite2D" parent="."]
+position = Vector2(201, 241)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle9" type="Sprite2D" parent="."]
+position = Vector2(201, 253)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle10" type="Sprite2D" parent="."]
+position = Vector2(201, 257)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle11" type="Sprite2D" parent="."]
+position = Vector2(201, 269)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle12" type="Sprite2D" parent="."]
+position = Vector2(201, 281)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle13" type="Sprite2D" parent="."]
+position = Vector2(201, 293)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle14" type="Sprite2D" parent="."]
+position = Vector2(201, 297)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle15" type="Sprite2D" parent="."]
+position = Vector2(201, 309)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle16" type="Sprite2D" parent="."]
+position = Vector2(241, 190)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle17" type="Sprite2D" parent="."]
+position = Vector2(241, 202)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle18" type="Sprite2D" parent="."]
+position = Vector2(241, 214)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle19" type="Sprite2D" parent="."]
+position = Vector2(241, 218)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle20" type="Sprite2D" parent="."]
+position = Vector2(241, 230)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle21" type="Sprite2D" parent="."]
+position = Vector2(241, 242)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle22" type="Sprite2D" parent="."]
+position = Vector2(241, 254)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle23" type="Sprite2D" parent="."]
+position = Vector2(241, 258)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle24" type="Sprite2D" parent="."]
+position = Vector2(241, 270)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle25" type="Sprite2D" parent="."]
+position = Vector2(241, 229)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle26" type="Sprite2D" parent="."]
+position = Vector2(241, 241)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle27" type="Sprite2D" parent="."]
+position = Vector2(241, 253)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle28" type="Sprite2D" parent="."]
+position = Vector2(241, 257)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle29" type="Sprite2D" parent="."]
+position = Vector2(241, 269)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle30" type="Sprite2D" parent="."]
+position = Vector2(241, 281)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle31" type="Sprite2D" parent="."]
+position = Vector2(241, 293)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle32" type="Sprite2D" parent="."]
+position = Vector2(241, 297)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle33" type="Sprite2D" parent="."]
+position = Vector2(241, 309)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle34" type="Sprite2D" parent="."]
+position = Vector2(282, 151)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle35" type="Sprite2D" parent="."]
+position = Vector2(282, 163)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle36" type="Sprite2D" parent="."]
+position = Vector2(282, 175)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle37" type="Sprite2D" parent="."]
+position = Vector2(282, 179)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle38" type="Sprite2D" parent="."]
+position = Vector2(282, 191)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle39" type="Sprite2D" parent="."]
+position = Vector2(282, 203)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle40" type="Sprite2D" parent="."]
+position = Vector2(282, 217)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle52" type="Sprite2D" parent="."]
+position = Vector2(282, 215)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle41" type="Sprite2D" parent="."]
+position = Vector2(282, 229)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle42" type="Sprite2D" parent="."]
+position = Vector2(282, 241)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle43" type="Sprite2D" parent="."]
+position = Vector2(282, 190)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle44" type="Sprite2D" parent="."]
+position = Vector2(282, 202)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle45" type="Sprite2D" parent="."]
+position = Vector2(282, 253)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle46" type="Sprite2D" parent="."]
+position = Vector2(282, 257)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle47" type="Sprite2D" parent="."]
+position = Vector2(282, 269)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle48" type="Sprite2D" parent="."]
+position = Vector2(282, 281)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle49" type="Sprite2D" parent="."]
+position = Vector2(282, 293)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle50" type="Sprite2D" parent="."]
+position = Vector2(282, 297)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandmiddle51" type="Sprite2D" parent="."]
+position = Vector2(282, 309)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandbase" type="Sprite2D" parent="."]
+position = Vector2(120, 308)
+texture = ExtResource("12_buo54")
+
+[node name="Jarstandbase2" type="Sprite2D" parent="."]
+position = Vector2(160, 308)
+texture = ExtResource("12_buo54")
+
+[node name="Jarstandbase3" type="Sprite2D" parent="."]
+position = Vector2(201, 308)
+texture = ExtResource("12_buo54")
+
+[node name="Jarstandbase4" type="Sprite2D" parent="."]
+position = Vector2(241, 308)
+texture = ExtResource("12_buo54")
+
+[node name="Jarstandbase5" type="Sprite2D" parent="."]
+position = Vector2(282, 308)
+texture = ExtResource("12_buo54")

@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://duob7t0ku6fxr"]
+[gd_scene load_steps=16 format=3 uid="uid://duob7t0ku6fxr"]
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
 [ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="2_u3djk"]
-[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="4_b4j66"]
 [ext_resource type="Texture2D" uid="uid://dfystxic3sawr" path="res://globby.png" id="3_kat1l"]
+[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="4_b4j66"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y0qgd"]
 atlas = ExtResource("3_kat1l")
@@ -78,6 +78,7 @@ script = ExtResource("1_6kfej")
 scentetoinstantiate = ExtResource("2_u3djk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-1, -4)
 scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_y401d")

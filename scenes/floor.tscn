@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://blka88gncfig2"]
+[gd_scene load_steps=4 format=3 uid="uid://ddbd17iisx17"]
 
 [ext_resource type="Texture2D" uid="uid://dgl5exlw64f1g" path="res://floor.png" id="1_8c4sn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_weegs"]
+friction = 0.75
+rough = true
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_283rt"]
 size = Vector2(32, 32)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_weegs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_283rt")
