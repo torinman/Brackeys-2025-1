@@ -27,7 +27,10 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_dx7nc"]
 script = ExtResource("2_ixrq5")
 scene = ExtResource("5_l53p1")
-overrides = {}
+overrides = {
+"custom_normal_font": "\"res://8*8pixelfont-2.ttf\"",
+"name_label_customfont": "\"res://8*8pixelfont-2.ttf\""
+}
 
 [sub_resource type="Resource" id="Resource_3m6ks"]
 script = ExtResource("2_ixrq5")
@@ -53,4 +56,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_ixrq5")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "12"
