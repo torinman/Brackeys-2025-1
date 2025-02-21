@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfaxexq7ns080"]
+[gd_scene load_steps=5 format=3 uid="uid://cfaxexq7ns080"]
 
 [ext_resource type="Script" path="res://scenes/lineser.gd" id="1_vogmm"]
 [ext_resource type="Texture2D" uid="uid://cqcxloi57udyx" path="res://textures/lineeser.png" id="2_fxgxi"]
@@ -9,19 +9,10 @@ shader = ExtResource("2_rejvy")
 shader_parameter/adjust = Vector3(0.4, -0.2, -0.5)
 shader_parameter/offset = Vector3(0, 0, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmt2f"]
-size = Vector2(8, 8)
-
 [node name="Laser" type="Node2D"]
 script = ExtResource("1_vogmm")
 
 [node name="Lineser" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_q7s8n")
-scale = Vector2(8, 8)
+scale = Vector2(3, 3)
 texture = ExtResource("2_fxgxi")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Lineser"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lineser/StaticBody2D"]
-visible = false
-shape = SubResource("RectangleShape2D_hmt2f")

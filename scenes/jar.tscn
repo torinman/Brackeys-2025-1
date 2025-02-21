@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://duob7t0ku6fxr"]
+[gd_scene load_steps=7 format=3 uid="uid://duob7t0ku6fxr"]
 
 [ext_resource type="Script" path="res://scenes/jarphysics.gd" id="1_6kfej"]
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="1_sav3e"]
 [ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="2_u3djk"]
+[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="4_b4j66"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6e3qc"]
 resource_local_to_scene = true
@@ -24,6 +25,9 @@ mass = 0.58
 physics_material_override = SubResource("PhysicsMaterial_6e3qc")
 max_contacts_reported = 20
 contact_monitor = true
+
+[node name="Laser" parent="Jar" instance=ExtResource("4_b4j66")]
+position = Vector2(-22, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Jar"]
 position = Vector2(-22, 0)
