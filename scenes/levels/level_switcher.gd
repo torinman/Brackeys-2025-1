@@ -9,7 +9,9 @@ func switch_level():
 	get_tree().change_scene_to_file(nextlevel)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
+		
 
 
 func _on_jar_tree_exiting():

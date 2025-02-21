@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi4dm0s7vu4nu"]
+
+[ext_resource type="Texture2D" uid="uid://bra1ccg2mhu61" path="res://textures/lineser.png" id="1_dcbt3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmt2f"]
+size = Vector2(8, 8)
+
+[node name="Laser" type="Node2D"]
+
+[node name="Lineser" type="Sprite2D" parent="."]
+texture = ExtResource("1_dcbt3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lineser"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lineser/StaticBody2D"]
+shape = SubResource("RectangleShape2D_hmt2f")

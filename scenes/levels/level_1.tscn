@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dw083nhkfs1e8"]
+[gd_scene load_steps=20 format=3 uid="uid://dw083nhkfs1e8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_lm3e6"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_scjm6"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_jco8u"]
 [ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="9_bvl2b"]
 [ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_odq21"]
+[ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_fchn2"]
+[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="12_q4mnd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
 atlas = ExtResource("10_odq21")
@@ -113,5 +115,10 @@ polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_bvl2b")
 autoplay = true
+script = ExtResource("11_fchn2")
+
+[node name="Laser" parent="." instance=ExtResource("12_q4mnd")]
+position = Vector2(306, 175)
 
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]
+[connection signal="tree_exiting" from="Jar/Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
