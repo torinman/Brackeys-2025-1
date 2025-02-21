@@ -120,11 +120,15 @@ position = Vector2(302, 224)
 position = Vector2(354, 224)
 
 [node name="Jarstand15" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(255, 322)
+position = Vector2(255, 323)
 rotation = -0.523598
 
 [node name="Jarstand17" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(278, 315)
+position = Vector2(281, 309)
+rotation = -0.523598
+
+[node name="Jarstand18" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(302, 304)
 
 [node name="Jarstand16" parent="." instance=ExtResource("4_u5not")]
 position = Vector2(227, 338)
@@ -181,7 +185,7 @@ position = Vector2(-22, 0)
 polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
 
 [node name="Laserer2" parent="." instance=ExtResource("14_waw1k")]
-position = Vector2(532, 265)
+position = Vector2(512, 259)
 rotation = -4.71238
 
 [node name="Box2" parent="." instance=ExtResource("13_a1gnc")]
