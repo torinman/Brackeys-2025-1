@@ -5,10 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="2_8c71b"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_xlm4s"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="4_qphl6"]
-[ext_resource type="Script" path="res://scenes/jarphysics.gd" id="6_dvlr5"]
-[ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="7_fqssy"]
-[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_jco8u"]
 [ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="9_bvl2b"]
+[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="9_ttvxg"]
 [ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_odq21"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_fchn2"]
 [ext_resource type="Texture2D" uid="uid://dfystxic3sawr" path="res://globby.png" id="12_kngpx"]
@@ -35,6 +33,7 @@ region = Rect2(197, 0, 50, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vi4gv"]
 atlas = ExtResource("10_odq21")
 region = Rect2(264, 0, 56, 63)
+
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdkf8"]
 resource_local_to_scene = true
@@ -156,7 +155,8 @@ polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -
 stream = ExtResource("9_bvl2b")
 autoplay = true
 script = ExtResource("11_fchn2")
-
+[node name="Jar" parent="." instance=ExtResource("9_ttvxg")]
+position = Vector2(520, 269)
 [node name="Laser" parent="." instance=ExtResource("12_q4mnd")]
 position = Vector2(291, 83)
 

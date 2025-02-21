@@ -1,6 +1,32 @@
-[gd_scene format=3 uid="uid://bvw1dk8vef1m4"]
+[gd_scene load_steps=3 format=3 uid="uid://bvw1dk8vef1m4"]
+
+[ext_resource type="Script" path="res://scenes/laserer.gd" id="1_f1qko"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kvqmh"]
+size = Vector2(16, 16)
 
 [node name="Laserer" type="Node2D"]
+script = ExtResource("1_f1qko")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 2.0
+default_color = Color(0, 0.811765, 1, 1)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 69)
+target_position = Vector2(0, 500)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 10.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 24.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = SubResource("PlaceholderTexture2D_kvqmh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+polygon = PackedVector2Array(-8, 8, 8, 8, 8, -5, 5, -8, -5, -8, -8, -5)

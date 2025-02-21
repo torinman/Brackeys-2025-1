@@ -21,6 +21,6 @@ func smash():
 
 
 func _on_body_entered(body):
-	if body.name == "FrameBody":
+	if body.name == "FrameBody" or  body.name == "bigbox":
 		smash()
  

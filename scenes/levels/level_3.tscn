@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://7btodu22qe7s"]
+[gd_scene load_steps=23 format=3 uid="uid://7btodu22qe7s"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_2x70h"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_ts6bx"]
@@ -12,6 +12,9 @@
 [ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="10_6cgwh"]
 [ext_resource type="PackedScene" uid="uid://ceev3lmyk7r1i" path="res://scenes/big_box.tscn" id="11_ov4rx"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_xcc5k"]
+[ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="13_a1gnc"]
+[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="13_jklq3"]
+[ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="14_waw1k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
 atlas = ExtResource("3_fkkqb")
@@ -33,7 +36,7 @@ region = Rect2(197, 0, 50, 64)
 atlas = ExtResource("3_fkkqb")
 region = Rect2(264, 0, 56, 63)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aih3a"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jd2fe"]
 resource_local_to_scene = true
 friction = 0.13
 bounce = 0.97
@@ -80,48 +83,59 @@ texture = SubResource("AtlasTexture_vi4gv")
 position = Vector2(375, 340)
 
 [node name="Jarstand2" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(140, 293)
+position = Vector2(109, 292)
 
 [node name="Jarstand5" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(60, 341)
+position = Vector2(47, 340)
+scale = Vector2(1, 1.025)
 
 [node name="Jarstand3" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(178, 267)
+position = Vector2(147, 266)
 
-[node name="Jarstand4" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(214, 225)
+[node name="Jarstand10" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(183, 224)
 
 [node name="Jarstand6" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(262, 225)
+position = Vector2(231, 224)
+
+[node name="Jarstand11" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(210, 208)
+
+[node name="Jarstand9" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(271, 157)
+
+[node name="Jarstand12" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(304, 119)
+
+[node name="Jarstand13" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(352, 120)
 
 [node name="Jarstand7" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(310, 225)
+position = Vector2(265, 224)
+
+[node name="Jarstand14" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(302, 224)
 
 [node name="Jarstand8" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(454, 225)
+position = Vector2(354, 224)
+
+[node name="Jarstand15" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(255, 323)
+rotation = -0.523598
+
+[node name="Jarstand17" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(281, 309)
+rotation = -0.523598
+
+[node name="Jarstand18" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(302, 304)
+
+[node name="Jarstand16" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(227, 338)
+rotation = -0.523598
 
 [node name="player" parent="." instance=ExtResource("5_4nmpi")]
-position = Vector2(53, 301)
-
-[node name="Jar" type="Node2D" parent="."]
-position = Vector2(519, 268)
-script = ExtResource("6_ll36x")
-scentetoinstantiate = ExtResource("7_g0es7")
-
-[node name="Jar" type="RigidBody2D" parent="Jar"]
-position = Vector2(-121, 33)
-mass = 0.58
-physics_material_override = SubResource("PhysicsMaterial_aih3a")
-max_contacts_reported = 20
-contact_monitor = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Jar/Jar"]
-position = Vector2(-22, 0)
-texture = SubResource("AtlasTexture_f7vhs")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar/Jar"]
-position = Vector2(-22, 0)
-polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
+position = Vector2(49, 298)
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -139,7 +153,42 @@ autoplay = true
 script = ExtResource("11_xcc5k")
 
 [node name="BIG BOX" parent="." instance=ExtResource("11_ov4rx")]
-position = Vector2(308, 162)
+position = Vector2(366, 167)
+
+[node name="Box" parent="." instance=ExtResource("13_a1gnc")]
+position = Vector2(307, 79)
+
+[node name="Laserer" parent="." instance=ExtResource("14_waw1k")]
+position = Vector2(329, 43)
+
+[node name="Jar" type="Node2D" parent="."]
+position = Vector2(376, 301)
+script = ExtResource("6_ll36x")
+scentetoinstantiate = ExtResource("7_g0es7")
+
+[node name="Jar" type="RigidBody2D" parent="Jar"]
+position = Vector2(22, 0)
+mass = 0.58
+physics_material_override = SubResource("PhysicsMaterial_jd2fe")
+max_contacts_reported = 20
+contact_monitor = true
+
+[node name="Laser" parent="Jar/Jar" instance=ExtResource("13_jklq3")]
+position = Vector2(-22, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+texture = SubResource("AtlasTexture_f7vhs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar/Jar"]
+position = Vector2(-22, 0)
+polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
+
+[node name="Laserer2" parent="." instance=ExtResource("14_waw1k")]
+position = Vector2(512, 259)
+rotation = -4.71238
+
+[node name="Box2" parent="." instance=ExtResource("13_a1gnc")]
+position = Vector2(171, 310)
 
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]
-[connection signal="tree_exiting" from="Jar/Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
