@@ -28,8 +28,15 @@ overrides = {}
 script = ExtResource("2_ixrq5")
 scene = ExtResource("5_l53p1")
 overrides = {
+"custom_bold_font": "\"res://8*8pixelfont-2.ttf\"",
 "custom_normal_font": "\"res://8*8pixelfont-2.ttf\"",
-"name_label_customfont": "\"res://8*8pixelfont-2.ttf\""
+"name_label_custom_size": "32.0",
+"name_label_customfont": "\"res://8*8pixelfont-2.ttf\"",
+"name_label_use_global_font": "false",
+"name_label_use_global_size": "false",
+"text_custom_size": "32.0",
+"text_use_global_size": "false",
+"use_global_fonts": "false"
 }
 
 [sub_resource type="Resource" id="Resource_3m6ks"]
@@ -40,7 +47,12 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_2feqh"]
 script = ExtResource("2_ixrq5")
 scene = ExtResource("7_kdpn7")
-overrides = {}
+overrides = {
+"font_custom": "\"res://8*8pixelfont-2.ttf\"",
+"font_size_custom": "32.0",
+"font_size_use_global": "false",
+"font_use_global": "false"
+}
 
 [resource]
 script = ExtResource("10_62jkj")

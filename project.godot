@@ -25,14 +25,19 @@ directories/dch_directory={
 "mrangry": "res://mrangry.dch"
 }
 directories/dtl_directory={
-"day1": "res://day1.dtl"
+"day1": "res://day1.dtl",
+"day2": "res://day2.dtl",
+"day3": "res://day3.dtl",
+"day4": "res://day4.dtl",
+"day5": "res://day5.dtl",
+"day6": "res://day6.dtl"
 }
 layout/style_list=["res://textboxstyle.tres"]
 layout/default_style="res://textboxstyle.tres"
 variables={}
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
+text/letter_speed=0.05
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
@@ -50,6 +55,7 @@ choices/reveal_by_input=false
 audio/max_channels=4.0
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
+text/autopauses={}
 
 [display]
 

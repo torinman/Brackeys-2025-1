@@ -10,7 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if once == 0:
-		Dialogic.start("day1")
+		Dialogic.start("day6")
 		once = 1
 
 
