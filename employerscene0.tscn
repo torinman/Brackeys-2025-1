@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://48rugd27byto"]
+
+[ext_resource type="PackedScene" uid="uid://dsynj1hnndfsl" path="res://scenes/employerscene1.tscn" id="1_6qwgh"]
+
+[node name="AnimatedSprite2D" instance=ExtResource("1_6qwgh")]
+nextlevel = "res://scenes/levels/level_1.tscn"
+day = "day0"

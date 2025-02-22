@@ -1,0 +1,119 @@
+[gd_scene load_steps=18 format=3 uid="uid://b2do6aido0sh0"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_pdiuw"]
+[ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_i3acj"]
+[ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="3_b1t72"]
+[ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="4_0tq4t"]
+[ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="5_d5fc1"]
+[ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="6_x1o4y"]
+[ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="7_k4eic"]
+[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="8_bihsu"]
+[ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="9_xbdof"]
+[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_da72c"]
+[ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_n1rat"]
+[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="12_0fkoo"]
+[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="13_e2ste"]
+[ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="14_oocct"]
+[ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="15_2aad8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2i57"]
+atlas = ExtResource("3_b1t72")
+region = Rect2(1, 2, 61, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob31l"]
+atlas = ExtResource("3_b1t72")
+region = Rect2(64, 0, 64, 64)
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource("1_pdiuw")
+nextlevel = "res://scenes/employerscene5.tscn"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("2_i3acj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(517, 213)
+texture = SubResource("AtlasTexture_h2i57")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(575, 258)
+texture = SubResource("AtlasTexture_ob31l")
+
+[node name="Jarstand" parent="." instance=ExtResource("4_0tq4t")]
+position = Vector2(518, 308)
+
+[node name="Jarstandmiddle" type="Sprite2D" parent="."]
+position = Vector2(518, 308)
+texture = ExtResource("5_d5fc1")
+
+[node name="Jarstandbase" type="Sprite2D" parent="."]
+position = Vector2(518, 308)
+texture = ExtResource("6_x1o4y")
+
+[node name="player" parent="." instance=ExtResource("7_k4eic")]
+position = Vector2(53, 301)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_bihsu")
+autoplay = true
+script = ExtResource("9_xbdof")
+
+[node name="Jar" parent="." instance=ExtResource("10_da72c")]
+position = Vector2(518, 269)
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("11_n1rat")
+
+[node name="FrameBody" type="StaticBody2D" parent="Frame"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
+position = Vector2(-1, -2)
+polygon = PackedVector2Array(-319, -178, -297, -156, -297, 152, 299, 152, 299, -156, -296, -156, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("12_0fkoo")]
+position = Vector2(242, 296)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(100, 312)
+
+[node name="Laserer" parent="." instance=ExtResource("14_oocct")]
+position = Vector2(600, 303)
+rotation = 1.57079
+
+[node name="Laserer2" parent="." instance=ExtResource("14_oocct")]
+position = Vector2(600, 320)
+rotation = 1.57079
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("12_0fkoo")]
+position = Vector2(179, 296)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(130, 312)
+
+[node name="Box" parent="." instance=ExtResource("15_2aad8")]
+position = Vector2(258, 78)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("12_0fkoo")]
+position = Vector2(242, 232)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(194, 248)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(162, 172)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("12_0fkoo")]
+position = Vector2(114, 156)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(290, 312)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(258, 110)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("13_e2ste")]
+position = Vector2(226, 110)
+
+[connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
