@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cq43wjeeg3pes"]
+[gd_scene load_steps=18 format=3 uid="uid://cq43wjeeg3pes"]
 
 [ext_resource type="Script" path="res://big_jar.gd" id="1_rlfof"]
 [ext_resource type="PackedScene" uid="uid://dp7l6u40jeobu" path="res://scenes/big_smash.tscn" id="2_doad5"]
@@ -85,7 +85,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_8on1m"]
+offsets = PackedFloat32Array(0.181818, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_15qr2"]
+gradient = SubResource("Gradient_8on1m")
+fill = 1
+fill_from = Vector2(0.504587, 0.5)
+fill_to = Vector2(0.495413, 0)
+
 [node name="BIG JAR" type="Node2D"]
+position = Vector2(0, -28)
 script = ExtResource("1_rlfof")
 scenetoinstantiate = ExtResource("2_doad5")
 
@@ -97,5 +108,11 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_lb4xr")
 animation = &"BREAK"
 autoplay = "idle"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 29)
+scale = Vector2(5.625, 5.625)
+energy = 0.5
+texture = SubResource("GradientTexture2D_15qr2")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

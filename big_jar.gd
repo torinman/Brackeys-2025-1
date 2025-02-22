@@ -13,6 +13,6 @@ func _process(delta):
 
 func _on_animated_sprite_2d_animation_finished():
 	var new_scene = scenetoinstantiate.instantiate()
-	new_scene.position = get_node(".").position + Vector2(0, -5)
+	new_scene.position = Vector2(320, 180)
 	new_scene.get_children()[0].emitting = true
 	add_sibling(new_scene)

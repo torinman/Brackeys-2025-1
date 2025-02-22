@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="4_u5not"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="5_4nmpi"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="5_advrk"]
+[ext_resource type="AudioStream" uid="uid://bugkiwese5l7p" path="res://audio/music2.mp3" id="8_mk736"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="9_hx1pe"]
-[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="10_6cgwh"]
 [ext_resource type="PackedScene" uid="uid://ceev3lmyk7r1i" path="res://scenes/big_box.tscn" id="11_ov4rx"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_xcc5k"]
 [ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="13_a1gnc"]
@@ -119,7 +119,7 @@ texture = SubResource("AtlasTexture_i1k7k")
 position = Vector2(49, 298)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_6cgwh")
+stream = ExtResource("8_mk736")
 autoplay = true
 script = ExtResource("11_xcc5k")
 

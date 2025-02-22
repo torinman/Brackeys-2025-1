@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_htpek"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="3_l43rh"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="5_g83y2"]
-[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="9_mfyew"]
+[ext_resource type="AudioStream" uid="uid://bugkiwese5l7p" path="res://audio/music2.mp3" id="8_a0ph1"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_gi68x"]
 [ext_resource type="Texture2D" uid="uid://b6dfoxl8vsl8v" path="res://warning-signs.png" id="10_wowln"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_3qv4f"]
@@ -45,9 +45,6 @@ position = Vector2(322, 111)
 [node name="Jarstand13" parent="." instance=ExtResource("2_atn5q")]
 position = Vector2(349, 36)
 rotation = -1.57079
-
-[node name="Jarstand12" parent="." instance=ExtResource("2_atn5q")]
-position = Vector2(351, 111)
 
 [node name="Jarstand3" parent="." instance=ExtResource("2_atn5q")]
 position = Vector2(282, 151)
@@ -276,6 +273,17 @@ texture = ExtResource("11_3v6du")
 position = Vector2(120, 308)
 texture = ExtResource("12_buo54")
 
+[node name="Jarstand14" parent="." instance=ExtResource("2_atn5q")]
+position = Vector2(560, 308)
+
+[node name="Jarstandmiddle53" type="Sprite2D" parent="."]
+position = Vector2(560, 308)
+texture = ExtResource("11_3v6du")
+
+[node name="Jarstandbase6" type="Sprite2D" parent="."]
+position = Vector2(560, 308)
+texture = ExtResource("12_buo54")
+
 [node name="Jarstandbase2" type="Sprite2D" parent="."]
 position = Vector2(160, 308)
 texture = ExtResource("12_buo54")
@@ -296,21 +304,15 @@ texture = ExtResource("12_buo54")
 position = Vector2(53, 301)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_mfyew")
+stream = ExtResource("8_a0ph1")
 autoplay = true
 script = ExtResource("11_3qv4f")
 
 [node name="Jar" parent="." instance=ExtResource("10_gi68x")]
-position = Vector2(356, 72)
+position = Vector2(560, 267)
 
 [node name="Box" parent="." instance=ExtResource("11_sfcjm")]
 position = Vector2(316, 73)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("13_btld8")]
-position = Vector2(598, 281)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("13_btld8")]
-position = Vector2(601, 313)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("13_btld8")]
 position = Vector2(520, 312)
@@ -355,7 +357,7 @@ position = Vector2(338, 170)
 position = Vector2(323, 122)
 
 [node name="StaticBody2D17" parent="." instance=ExtResource("13_btld8")]
-position = Vector2(355, 122)
+position = Vector2(354, 122)
 
 [node name="StaticBody2D21" parent="." instance=ExtResource("13_btld8")]
 position = Vector2(360, 35)

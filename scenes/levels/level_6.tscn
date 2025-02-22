@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="5_ivsr3"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="6_v65o4"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="7_towqw"]
-[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="8_qvbd2"]
+[ext_resource type="AudioStream" uid="uid://bugkiwese5l7p" path="res://audio/music2.mp3" id="8_s0x5a"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="9_re5l7"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_mcdl0"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_n8cpu"]
@@ -94,7 +94,7 @@ position = Vector2(388, 95)
 position = Vector2(163, 117)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_qvbd2")
+stream = ExtResource("8_s0x5a")
 autoplay = true
 script = ExtResource("9_re5l7")
 

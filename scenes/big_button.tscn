@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwwjy3ia35ah"]
+[gd_scene load_steps=9 format=3 uid="uid://bwwjy3ia35ah"]
 
 [ext_resource type="Script" path="res://scenes/big_button.gd" id="1_fa216"]
 [ext_resource type="PackedScene" uid="uid://8475q5n2fu4b" path="res://scenes/credits.tscn" id="2_lbla5"]
 [ext_resource type="Texture2D" uid="uid://dvohl4ddl46b1" path="res://textures/buttondown.png" id="2_vxqqy"]
 [ext_resource type="Texture2D" uid="uid://5gqmwinohl8x" path="res://textures/buttonup.png" id="3_6bxr7"]
+[ext_resource type="AudioStream" uid="uid://bixbnyvy1mjxd" path="res://audio/powerdown.ogg" id="5_818o1"]
+[ext_resource type="AudioStream" uid="uid://bt402b4e0krvq" path="res://audio/ice-cracking-6825.mp3" id="6_0dtbx"]
+[ext_resource type="Script" path="res://scenes/CanvasModulate.gd" id="7_bb68h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oyynn"]
 animations = [{
@@ -40,5 +43,16 @@ autoplay = "up"
 scale = Vector2(2, 2)
 polygon = PackedVector2Array(-8, 3, -8, 2, -6, -3, -5, -4, 5, -4, 6, -3, 8, 2, 8, 3)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_818o1")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_0dtbx")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(319, 148)
+script = ExtResource("7_bb68h")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="CanvasModulate" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -8,4 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_node("Sprite2D").scale *= 1.03
+	get_node("Sprite2D").scale *= 1.015
+	get_node("Sprite2D").scale += Vector2(0.001, 0.001)

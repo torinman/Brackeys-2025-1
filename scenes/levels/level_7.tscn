@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ceunjj83qhnqn"]
+[gd_scene load_steps=17 format=3 uid="uid://ceunjj83qhnqn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_k8kin"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_b8ild"]
@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="5_2bfn4"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="6_p0skx"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="7_sxxj1"]
-[ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="8_uv7ds"]
-[ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="9_75u1x"]
 [ext_resource type="PackedScene" uid="uid://cq43wjeeg3pes" path="res://scenes/big_jar.tscn" id="11_nhlmo"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_vsodw"]
 [ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="12_xrgdn"]
@@ -87,11 +85,6 @@ texture = ExtResource("6_p0skx")
 
 [node name="player" parent="." instance=ExtResource("7_sxxj1")]
 position = Vector2(137, 301)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_uv7ds")
-autoplay = true
-script = ExtResource("9_75u1x")
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
