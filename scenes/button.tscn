@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxsquse4kffqg"]
+
+[ext_resource type="Texture2D" uid="uid://dvohl4ddl46b1" path="res://textures/buttondown.png" id="1_qjau3"]
+[ext_resource type="Script" path="res://scenes/button.gd" id="1_rctpe"]
+[ext_resource type="Texture2D" uid="uid://5gqmwinohl8x" path="res://textures/buttonup.png" id="2_iyqyy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oyynn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qjau3")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iyqyy")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_rctpe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oyynn")
+animation = &"up"
+autoplay = "up"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-8, 4, -8, 2, -6, -3, -5, -4, 5, -4, 6, -3, 8, 2, 8, 4)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
