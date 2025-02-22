@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://7btodu22qe7s"]
+[gd_scene load_steps=23 format=3 uid="uid://7btodu22qe7s"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_2x70h"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_ts6bx"]
@@ -7,17 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://dkbrwgxseqatd" path="res://scenes/jarstand.tscn" id="4_u5not"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="5_4nmpi"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="5_advrk"]
-[ext_resource type="Script" path="res://scenes/levels/fakejarphysics.gd" id="6_ll36x"]
-[ext_resource type="PackedScene" uid="uid://dkcmmokfi2h16" path="res://scenes/smash.tscn" id="7_g0es7"]
-[ext_resource type="Texture2D" uid="uid://d6a4xd623a6i" path="res://textures/jar.png" id="8_wj3pp"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="9_hx1pe"]
 [ext_resource type="AudioStream" uid="uid://dm0prslbj6bg2" path="res://soundtrack1.wav" id="10_6cgwh"]
 [ext_resource type="PackedScene" uid="uid://ceev3lmyk7r1i" path="res://scenes/big_box.tscn" id="11_ov4rx"]
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="11_xcc5k"]
 [ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="13_a1gnc"]
-[ext_resource type="PackedScene" uid="uid://cfaxexq7ns080" path="res://scenes/laser.tscn" id="13_jklq3"]
 [ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="14_waw1k"]
-[ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="17_el5mr"]
+[ext_resource type="Texture2D" uid="uid://dgl5exlw64f1g" path="res://floor.png" id="16_8ojjd"]
+[ext_resource type="Texture2D" uid="uid://2ectmlyll1x7" path="res://bigfloor.png" id="17_ai7u7"]
+[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="17_el5mr"]
+[ext_resource type="Texture2D" uid="uid://cmt02jmom04u7" path="res://textures/jarstandtop.png" id="18_cafya"]
+[ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="19_y7ktv"]
+[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="21_rqph4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
 atlas = ExtResource("3_fkkqb")
@@ -31,24 +32,6 @@ region = Rect2(64, 0, 64, 64)
 atlas = ExtResource("3_fkkqb")
 region = Rect2(137, 19, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_736hv"]
-atlas = ExtResource("3_fkkqb")
-region = Rect2(197, 0, 50, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vi4gv"]
-atlas = ExtResource("3_fkkqb")
-region = Rect2(264, 0, 56, 63)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jd2fe"]
-resource_local_to_scene = true
-friction = 0.13
-bounce = 0.97
-absorbent = true
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f7vhs"]
-atlas = ExtResource("8_wj3pp")
-region = Rect2(9, 14, 33, 36)
-
 [node name="Level 3" type="Node2D"]
 script = ExtResource("1_2x70h")
 nextlevel = "res://scenes/employerscene3.tscn"
@@ -57,228 +40,76 @@ nextlevel = "res://scenes/employerscene3.tscn"
 position = Vector2(320, 180)
 texture = ExtResource("2_ts6bx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(449, 138)
-texture = SubResource("AtlasTexture_bpreq")
+[node name="Jarstandtop" type="Sprite2D" parent="."]
+position = Vector2(228, 299)
+texture = ExtResource("18_cafya")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(373, 263)
-texture = SubResource("AtlasTexture_wlcqw")
+[node name="Jarstandtop2" type="Sprite2D" parent="."]
+position = Vector2(285, 299)
+texture = ExtResource("18_cafya")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(429, 299)
-rotation = 1.5708
-texture = SubResource("AtlasTexture_i1k7k")
-
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(447, 217)
-texture = SubResource("AtlasTexture_736hv")
-
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(376, 221)
-texture = SubResource("AtlasTexture_i1k7k")
-
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(336, 174)
-texture = SubResource("AtlasTexture_vi4gv")
-
-[node name="Jarstandmiddle" type="Sprite2D" parent="."]
-position = Vector2(109, 292)
-texture = ExtResource("4_e8n12")
+[node name="Jarstandtop3" type="Sprite2D" parent="."]
+position = Vector2(256, 299)
+texture = ExtResource("18_cafya")
 
 [node name="Jarstandmiddle2" type="Sprite2D" parent="."]
-position = Vector2(109, 304)
+position = Vector2(228, 299)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle3" type="Sprite2D" parent="."]
-position = Vector2(109, 316)
+position = Vector2(255, 299)
 texture = ExtResource("4_e8n12")
 
-[node name="Jarstandbase" type="Sprite2D" parent="."]
-position = Vector2(109, 308)
-texture = ExtResource("5_advrk")
-
-[node name="Jarstand" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(407, 340)
-
-[node name="Jarstand2" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(109, 292)
-
 [node name="Jarstandmiddle4" type="Sprite2D" parent="."]
-position = Vector2(153, 252)
+position = Vector2(285, 299)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle5" type="Sprite2D" parent="."]
-position = Vector2(153, 260)
+position = Vector2(228, 311)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle6" type="Sprite2D" parent="."]
-position = Vector2(153, 272)
+position = Vector2(255, 311)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle7" type="Sprite2D" parent="."]
-position = Vector2(153, 284)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle8" type="Sprite2D" parent="."]
-position = Vector2(153, 296)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle9" type="Sprite2D" parent="."]
-position = Vector2(153, 308)
+position = Vector2(285, 311)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandbase2" type="Sprite2D" parent="."]
-position = Vector2(153, 308)
+position = Vector2(227, 310)
 texture = ExtResource("5_advrk")
 
-[node name="Jarstand3" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(153, 252)
-
-[node name="Jarstand5" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(47, 340)
-scale = Vector2(1, 1.025)
-
-[node name="Jarstand11" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(210, 208)
-
-[node name="Jarstand9" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(271, 157)
-
-[node name="Jarstand10" parent="." instance=ExtResource("4_u5not")]
-position = Vector2(477, 228)
-
-[node name="Jarstandmiddle10" type="Sprite2D" parent="."]
-position = Vector2(271, 157)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle11" type="Sprite2D" parent="."]
-position = Vector2(271, 169)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle12" type="Sprite2D" parent="."]
-position = Vector2(271, 181)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle13" type="Sprite2D" parent="."]
-position = Vector2(271, 193)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle14" type="Sprite2D" parent="."]
-position = Vector2(255, 240)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle15" type="Sprite2D" parent="."]
-position = Vector2(255, 252)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle16" type="Sprite2D" parent="."]
-position = Vector2(255, 265)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle17" type="Sprite2D" parent="."]
-position = Vector2(255, 277)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle18" type="Sprite2D" parent="."]
-position = Vector2(255, 260)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle19" type="Sprite2D" parent="."]
-position = Vector2(255, 272)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle20" type="Sprite2D" parent="."]
-position = Vector2(255, 284)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle21" type="Sprite2D" parent="."]
-position = Vector2(255, 296)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle22" type="Sprite2D" parent="."]
-position = Vector2(477, 242)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle23" type="Sprite2D" parent="."]
-position = Vector2(477, 254)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle24" type="Sprite2D" parent="."]
-position = Vector2(477, 267)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle25" type="Sprite2D" parent="."]
-position = Vector2(477, 279)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle38" type="Sprite2D" parent="."]
-position = Vector2(477, 228)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle39" type="Sprite2D" parent="."]
-position = Vector2(477, 240)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle40" type="Sprite2D" parent="."]
-position = Vector2(477, 253)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle41" type="Sprite2D" parent="."]
-position = Vector2(477, 265)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle26" type="Sprite2D" parent="."]
-position = Vector2(477, 262)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle27" type="Sprite2D" parent="."]
-position = Vector2(477, 274)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle28" type="Sprite2D" parent="."]
-position = Vector2(477, 286)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle29" type="Sprite2D" parent="."]
-position = Vector2(477, 298)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle30" type="Sprite2D" parent="."]
-position = Vector2(477, 267)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle31" type="Sprite2D" parent="."]
-position = Vector2(477, 279)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle32" type="Sprite2D" parent="."]
-position = Vector2(477, 292)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle33" type="Sprite2D" parent="."]
-position = Vector2(477, 304)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle34" type="Sprite2D" parent="."]
-position = Vector2(477, 287)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle35" type="Sprite2D" parent="."]
-position = Vector2(477, 299)
-texture = ExtResource("4_e8n12")
-
-[node name="Jarstandmiddle36" type="Sprite2D" parent="."]
-position = Vector2(477, 311)
-texture = ExtResource("4_e8n12")
-
 [node name="Jarstandbase3" type="Sprite2D" parent="."]
-position = Vector2(271, 183)
+position = Vector2(256, 310)
 texture = ExtResource("5_advrk")
 
 [node name="Jarstandbase4" type="Sprite2D" parent="."]
-position = Vector2(477, 308)
+position = Vector2(285, 310)
 texture = ExtResource("5_advrk")
+
+[node name="Jarstandmiddle9" type="Sprite2D" parent="."]
+position = Vector2(324, 231)
+rotation = 1.5708
+texture = ExtResource("4_e8n12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(326, 280)
+texture = SubResource("AtlasTexture_bpreq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(426, 276)
+texture = SubResource("AtlasTexture_wlcqw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(181, 278)
+rotation = -0.785398
+texture = SubResource("AtlasTexture_i1k7k")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(418, 305)
+rotation = 1.8326
+texture = SubResource("AtlasTexture_i1k7k")
 
 [node name="player" parent="." instance=ExtResource("5_4nmpi")]
 position = Vector2(49, 298)
@@ -288,113 +119,8 @@ stream = ExtResource("10_6cgwh")
 autoplay = true
 script = ExtResource("11_xcc5k")
 
-[node name="BIG BOX" parent="." instance=ExtResource("11_ov4rx")]
-position = Vector2(366, 167)
-
-[node name="Box" parent="." instance=ExtResource("13_a1gnc")]
-position = Vector2(307, 79)
-
 [node name="Laserer" parent="." instance=ExtResource("14_waw1k")]
-position = Vector2(329, 43)
-
-[node name="Jar" type="Node2D" parent="."]
-position = Vector2(376, 301)
-script = ExtResource("6_ll36x")
-scentetoinstantiate = ExtResource("7_g0es7")
-
-[node name="Jar" type="RigidBody2D" parent="Jar"]
-position = Vector2(22, 0)
-mass = 0.58
-physics_material_override = SubResource("PhysicsMaterial_jd2fe")
-max_contacts_reported = 20
-contact_monitor = true
-
-[node name="Laser" parent="Jar/Jar" instance=ExtResource("13_jklq3")]
-position = Vector2(10, 2)
-
-[node name="Sprite2D" type="Sprite2D" parent="Jar/Jar"]
-position = Vector2(10, 0)
-texture = SubResource("AtlasTexture_f7vhs")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Jar/Jar"]
-position = Vector2(10, 0)
-polygon = PackedVector2Array(17, -11, 15, 17, 14, 18, -14, 18, -15, 17, -17, -11, -17, -17, -16, -18, 16, -18, 17, -17)
-
-[node name="Laserer2" parent="." instance=ExtResource("14_waw1k")]
-position = Vector2(512, 259)
-rotation = -4.71238
-
-[node name="Box2" parent="." instance=ExtResource("13_a1gnc")]
-position = Vector2(136, 305)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(301, 304)
-
-[node name="StaticBody2D7" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(301, 336)
-
-[node name="StaticBody2D8" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(274, 307)
-rotation = -0.261799
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(245, 315)
-rotation = -0.261799
-
-[node name="StaticBody2D10" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(215, 323)
-rotation = -0.261799
-
-[node name="StaticBody2D11" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(186, 331)
-rotation = -0.261799
-
-[node name="StaticBody2D12" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(157, 339)
-rotation = -0.261799
-
-[node name="StaticBody2D13" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(282, 336)
-rotation = -0.261799
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(331, 276)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(331, 304)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(330, 341)
-
-[node name="StaticBody2D4" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(331, 336)
-
-[node name="StaticBody2D14" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(307, 113)
-
-[node name="StaticBody2D15" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(349, 113)
-
-[node name="StaticBody2D16" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(193, 219)
-
-[node name="StaticBody2D17" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(224, 219)
-
-[node name="StaticBody2D18" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(255, 219)
-
-[node name="StaticBody2D19" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(286, 219)
-
-[node name="StaticBody2D20" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(310, 219)
-
-[node name="StaticBody2D21" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(350, 219)
-
-[node name="StaticBody2D22" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(350, 219)
+position = Vector2(316, 42)
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -406,5 +132,66 @@ texture = ExtResource("9_hx1pe")
 position = Vector2(-1, 5)
 polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -163, -296, -163, -317, -177, 321, -177, 321, 183, -319, 183)
 
-[connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
-[connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]
+[node name="Jarstand" parent="." instance=ExtResource("4_u5not")]
+position = Vector2(372, 311)
+
+[node name="Jarstandmiddle" type="Sprite2D" parent="."]
+position = Vector2(372, 311)
+texture = ExtResource("4_e8n12")
+
+[node name="Jarstandbase" type="Sprite2D" parent="."]
+position = Vector2(372, 311)
+texture = ExtResource("5_advrk")
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(157, 314)
+texture = ExtResource("16_8ojjd")
+
+[node name="Bigfloor" type="Sprite2D" parent="."]
+position = Vector2(273, 247)
+texture = ExtResource("17_ai7u7")
+
+[node name="Floor2" type="Sprite2D" parent="."]
+position = Vector2(225, 263)
+texture = ExtResource("16_8ojjd")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(341, 231)
+
+[node name="Box" parent="." instance=ExtResource("13_a1gnc")]
+position = Vector2(289, 199)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("21_rqph4")]
+position = Vector2(273, 247)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(225, 263)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(157, 314)
+
+[node name="BIG BOX" parent="." instance=ExtResource("11_ov4rx")]
+position = Vector2(586, 298)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(538, 314)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("21_rqph4")]
+position = Vector2(586, 234)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(602, 186)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(506, 314)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("17_el5mr")]
+position = Vector2(538, 282)
+
+[node name="Jarstandmiddle8" type="Sprite2D" parent="."]
+position = Vector2(312, 231)
+rotation = 1.5708
+texture = ExtResource("4_e8n12")
+
+[node name="Jar" parent="." instance=ExtResource("19_y7ktv")]
+position = Vector2(372, 273)

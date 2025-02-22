@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d4mw4ee5gfked"]
+[gd_scene load_steps=16 format=3 uid="uid://d4mw4ee5gfked"]
 
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="1_elsu7"]
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_tf3ac"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="8_7v3dj"]
 [ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="10_rm2xo"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="11_i52gx"]
+[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="12_s8wu0"]
+[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="13_08ebf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2i57"]
 atlas = ExtResource("2_xs0p0")
@@ -67,5 +69,11 @@ texture = ExtResource("5_ughfa")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 position = Vector2(-1, -2)
 polygon = PackedVector2Array(-319, -178, -297, -156, -297, 152, 299, 152, 299, -156, -296, -156, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("12_s8wu0")]
+position = Vector2(341, 296)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("13_08ebf")]
+position = Vector2(293, 312)
 
 [connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
