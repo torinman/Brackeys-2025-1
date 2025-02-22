@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Lineser.get_material().set_shader_parameter("adjust", Vector3(randf_range(-0.5, 0.4), randf_range(-0.5, 0.4), randf_range(-0.5, 0.4)))
-	$Lineser.get_material().set_shader_parameter("offset", Vector3(randf_range(-0.0, 6.28394), randf_range(-0.0, 6.28394), randf_range(-0.0, 6.28394)))
+	get_node("Lineser").get_material().set_shader_parameter("adjust", Vector3(randf_range(-0.5, 0.4), randf_range(-0.5, 0.4), randf_range(-0.5, 0.4)))
+	get_node("Lineser").get_material().set_shader_parameter("offset", Vector3(randf_range(-0.0, 6.28394), randf_range(-0.0, 6.28394), randf_range(-0.0, 6.28394)))
