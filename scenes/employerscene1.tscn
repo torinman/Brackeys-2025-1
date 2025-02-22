@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsynj1hnndfsl"]
+[gd_scene load_steps=8 format=3 uid="uid://dsynj1hnndfsl"]
 
 [ext_resource type="Texture2D" uid="uid://cemfht5vrpgyq" path="res://textures/employer.png" id="1_8rfs5"]
 [ext_resource type="Script" path="res://scenes/employerscene.gd" id="2_0itfq"]
+[ext_resource type="AudioStream" uid="uid://mqcgjov5u272" path="res://audio/mrangrytheme.mp3" id="3_4dl7t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_civ4b"]
 atlas = ExtResource("1_8rfs5")
@@ -45,3 +46,8 @@ frame_progress = 0.374994
 script = ExtResource("2_0itfq")
 nextlevel = "res://scenes/levels/level_2.tscn"
 day = "day1"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4dl7t")
+volume_db = -18.819
+autoplay = true
