@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyc2tn6oamfr8"]
+[gd_scene load_steps=7 format=3 uid="uid://ca0br5s1de8w2"]
 
 [ext_resource type="Texture2D" uid="uid://dxckop4ok4iyk" path="res://Thumbnailmuseum.png" id="1_ys32s"]
 [ext_resource type="Script" path="res://menu.gd" id="2_f6xph"]
