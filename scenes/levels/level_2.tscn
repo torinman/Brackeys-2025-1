@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="11_3v6du"]
 [ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="11_sfcjm"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="12_buo54"]
-[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="13_btld8"]
-[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="14_welgy"]
+[ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="13_btld8"]
+[ext_resource type="PackedScene" uid="uid://cgk7l3w7n1pcn" path="res://scenes/bigfloor.tscn" id="14_welgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohin5"]
 atlas = ExtResource("10_wowln")

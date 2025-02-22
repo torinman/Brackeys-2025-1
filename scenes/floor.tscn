@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dgl5exlw64f1g" path="res://floor.png" id="1_8c4sn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_weegs"]
-friction = 0.75
+friction = 0.8
 rough = true
 absorbent = true
 

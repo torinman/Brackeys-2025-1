@@ -34,7 +34,7 @@ autoplay = "up"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-8, 4, -8, 2, -6, -3, -5, -4, 5, -4, 6, -3, 8, 2, 8, 4)
+polygon = PackedVector2Array(-8, 3, -8, 2, -6, -3, -5, -4, 5, -4, 6, -3, 8, 2, 8, 3)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
