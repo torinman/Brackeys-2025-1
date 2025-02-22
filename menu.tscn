@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyc2tn6oamfr8"]
+[gd_scene load_steps=7 format=3 uid="uid://ca0br5s1de8w2"]
 
 [ext_resource type="Texture2D" uid="uid://dxckop4ok4iyk" path="res://Thumbnailmuseum.png" id="1_ys32s"]
 [ext_resource type="Script" path="res://menu.gd" id="2_f6xph"]
@@ -21,15 +21,6 @@ offset_left = -390.0
 offset_top = -180.0
 offset_right = -250.0
 offset_bottom = 180.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 267.0
-offset_top = -177.0
-offset_right = 407.0
-offset_bottom = 183.0
-rotation = 1.5708
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
