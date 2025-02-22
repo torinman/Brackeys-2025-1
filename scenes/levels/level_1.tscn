@@ -22,7 +22,7 @@ region = Rect2(64, 0, 64, 64)
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_tf3ac")
-nextlevel = "res://scenes/levels/level_2.tscn"
+nextlevel = "res://scenes/employerscene1.tscn"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -67,3 +67,5 @@ texture = ExtResource("5_ughfa")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 position = Vector2(-1, -2)
 polygon = PackedVector2Array(-319, -178, -297, -156, -297, 152, 299, 152, 299, -156, -296, -156, -317, -177, 321, -177, 321, 183, -319, 183)
+
+[connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]

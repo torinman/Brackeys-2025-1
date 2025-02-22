@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcrt0cnab16wk"]
-
-[ext_resource type="PackedScene" uid="uid://d25mentlkp5m5" path="res://scenes/employerscene1.tscn" id="1_7oylx"]
-[ext_resource type="Script" path="res://employerscene2.gd" id="2_k7ftq"]
-
-[node name="AnimatedSprite2D" instance=ExtResource("1_7oylx")]
-script = ExtResource("2_k7ftq")

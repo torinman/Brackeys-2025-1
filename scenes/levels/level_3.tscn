@@ -51,7 +51,7 @@ region = Rect2(9, 14, 33, 36)
 
 [node name="Level 3" type="Node2D"]
 script = ExtResource("1_2x70h")
-nextlevel = "res://scenes/levels/level_1.tscn"
+nextlevel = "res://scenes/employerscene3.tscn"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -406,4 +406,5 @@ texture = ExtResource("9_hx1pe")
 position = Vector2(-1, 5)
 polygon = PackedVector2Array(-319, -178, -297, -163, -297, 145, 299, 145, 299, -163, -296, -163, -317, -177, 321, -177, 321, 183, -319, 183)
 
+[connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
 [connection signal="body_entered" from="Jar/Jar" to="Jar" method="_on_body_entered"]

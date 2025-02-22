@@ -43,3 +43,5 @@ sprite_frames = SubResource("SpriteFrames_l506x")
 autoplay = "default"
 frame_progress = 0.374994
 script = ExtResource("2_0itfq")
+nextlevel = "res://scenes/levels/level_2.tscn"
+day = "day1"
