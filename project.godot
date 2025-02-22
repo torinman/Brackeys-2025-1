@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys-2025-1"
-run/main_scene="res://scenes/levels/level_1.tscn"
+run/main_scene="res://employerscene0.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://textures/icon.svg"
 
@@ -25,6 +25,7 @@ directories/dch_directory={
 "mrangry": "res://mrangry.dch"
 }
 directories/dtl_directory={
+"day0": "res://day0.dtl",
 "day1": "res://day1.dtl",
 "day2": "res://day2.dtl",
 "day3": "res://day3.dtl",
