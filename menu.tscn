@@ -23,15 +23,6 @@ offset_right = -250.0
 offset_bottom = 180.0
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 267.0
-offset_top = -177.0
-offset_right = 407.0
-offset_bottom = 183.0
-rotation = 1.5708
-color = Color(0, 0, 0, 1)
-
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
 position = Vector2(402.423, 70)
 rotation = 1.5708
