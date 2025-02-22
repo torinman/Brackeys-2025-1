@@ -30,17 +30,20 @@ position = Vector2(320, 180)
 texture = ExtResource("2_sjvoj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(523, 216)
+position = Vector2(522, 213)
 texture = SubResource("AtlasTexture_h2i57")
 
 [node name="StaticBody2D11" parent="." instance=ExtResource("12_bsbag")]
-position = Vector2(122, 166)
+position = Vector2(122, 174)
+
+[node name="StaticBody2D23" parent="." instance=ExtResource("12_bsbag")]
+position = Vector2(56, 296)
 
 [node name="StaticBody2D15" parent="." instance=ExtResource("12_bsbag")]
-position = Vector2(258, 132)
+position = Vector2(258, 149)
 
 [node name="StaticBody2D10" parent="." instance=ExtResource("13_1e41a")]
-position = Vector2(169, 150)
+position = Vector2(169, 158)
 
 [node name="StaticBody2D13" parent="." instance=ExtResource("13_1e41a")]
 position = Vector2(192, 312)
@@ -48,17 +51,47 @@ position = Vector2(192, 312)
 [node name="StaticBody2D14" parent="." instance=ExtResource("13_1e41a")]
 position = Vector2(266, 312)
 
+[node name="StaticBody2D17" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(297, 312)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(372, 312)
+
+[node name="StaticBody2D19" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(468, 312)
+
+[node name="StaticBody2D20" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(430, 134)
+
+[node name="StaticBody2D21" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(462, 134)
+
+[node name="StaticBody2D25" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(462, 102)
+
 [node name="StaticBody2D12" parent="." instance=ExtResource("13_1e41a")]
-position = Vector2(138, 214)
+position = Vector2(138, 222)
+
+[node name="StaticBody2D24" parent="." instance=ExtResource("13_1e41a")]
+position = Vector2(103, 312)
 
 [node name="Box2" parent="." instance=ExtResource("15_75i1o")]
-position = Vector2(125, 113)
+position = Vector2(125, 121)
 
 [node name="Box3" parent="." instance=ExtResource("15_75i1o")]
-position = Vector2(262, 79)
+position = Vector2(262, 92)
+
+[node name="StaticBody2D18" parent="." instance=ExtResource("12_bsbag")]
+position = Vector2(383, 150)
+
+[node name="StaticBody2D22" parent="." instance=ExtResource("12_bsbag")]
+position = Vector2(563, 133)
+
+[node name="Box4" parent="." instance=ExtResource("15_75i1o")]
+position = Vector2(388, 95)
 
 [node name="player" parent="." instance=ExtResource("7_towqw")]
-position = Vector2(163, 109)
+position = Vector2(163, 117)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_qvbd2")
@@ -90,26 +123,36 @@ texture = ExtResource("6_v65o4")
 position = Vector2(522, 269)
 
 [node name="Laserers" type="CanvasGroup" parent="."]
-position = Vector2(177, 181)
+position = Vector2(177, 189)
 rotation = -1.5708
 
 [node name="Laserer2" parent="Laserers" instance=ExtResource("14_mtrva")]
 position = Vector2(-32, -80)
 rotation = -3.14159
+col = Color(0.852915, 0.279194, 0, 1)
 
-[node name="Laserer3" parent="Laserers" instance=ExtResource("14_mtrva")]
-position = Vector2(138, 131)
+[node name="Laserer5" parent="Laserers" instance=ExtResource("14_mtrva")]
+position = Vector2(144.999, 149.001)
+rotation = 1.5708
+col = Color(0.852915, 0.279194, 0, 1)
+
+[node name="Laserer4" parent="Laserers" instance=ExtResource("14_mtrva")]
+position = Vector2(145.999, 321.001)
 rotation = 1.5708
 on_start = false
+col = Color(0.852915, 0.279194, 0, 1)
 
 [node name="Laserer" parent="." instance=ExtResource("14_mtrva")]
-position = Vector2(177, 181)
+position = Vector2(177, 189)
 rotation = -1.5708
 
 [node name="Button" parent="." instance=ExtResource("16_w5s36")]
 position = Vector2(229, 324)
 
 [node name="Button2" parent="." instance=ExtResource("16_w5s36")]
-position = Vector2(301, 324)
+position = Vector2(334, 324)
+
+[node name="Button3" parent="." instance=ExtResource("16_w5s36")]
+position = Vector2(419, 324)
 
 [connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]

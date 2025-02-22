@@ -25,8 +25,3 @@ offset_bottom = 24.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
 texture = SubResource("PlaceholderTexture2D_kvqmh")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
-polygon = PackedVector2Array(-8, 8, 8, 8, 8, -5, 5, -8, -5, -8, -8, -5)

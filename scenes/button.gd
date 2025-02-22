@@ -15,11 +15,11 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	for node in get_parent().get_node(groop).get_children():
-		node.turn_on()
+		node.toggle()
 	sprite.play("down")
 
 
 func _on_area_2d_body_exited(body):
 	sprite.play("up")
 	for node in get_parent().get_node(groop).get_children():
-		node.turn_off()
+		node.toggle()

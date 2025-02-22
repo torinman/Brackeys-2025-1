@@ -145,13 +145,16 @@ rotation = 3.14159
 
 [node name="Laserer" parent="Laserers" instance=ExtResource("14_oocct")]
 position = Vector2(40, -4.99989)
+col = Color(0.826075, 0.259489, 0, 1)
 
 [node name="Laserer2" parent="Laserers" instance=ExtResource("14_oocct")]
 position = Vector2(-39, -5.00011)
 on_start = false
+col = Color(0.826075, 0.259489, 0, 1)
 
 [node name="Laserer3" parent="Laserers" instance=ExtResource("14_oocct")]
 position = Vector2(-135, -5.00037)
+col = Color(0.826075, 0.259489, 0, 1)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("13_e2ste")]
 position = Vector2(338, 280)
