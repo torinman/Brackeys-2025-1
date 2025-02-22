@@ -1,0 +1,101 @@
+[gd_scene load_steps=16 format=3 uid="uid://cq43wjeeg3pes"]
+
+[ext_resource type="Script" path="res://big_jar.gd" id="1_rlfof"]
+[ext_resource type="PackedScene" uid="uid://dp7l6u40jeobu" path="res://scenes/big_smash.tscn" id="2_doad5"]
+[ext_resource type="Texture2D" uid="uid://yegtpt1gc8a5" path="res://bigjarcracking.png" id="2_qbqhk"]
+[ext_resource type="Texture2D" uid="uid://d2iymjigbuvjb" path="res://bigjar.png" id="3_yx5e6"]
+[ext_resource type="PackedScene" uid="uid://bbi2dcwurr0dl" path="res://scenes/big_laser.tscn" id="4_7twig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvmmo"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhaoy"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy7p1"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pia8x"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brmdw"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(1600, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rug6k"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(2000, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iryp"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(2400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk47n"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(2800, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c781t"]
+atlas = ExtResource("2_qbqhk")
+region = Rect2(3200, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lb4xr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvmmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhaoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy7p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pia8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brmdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rug6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iryp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk47n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c781t")
+}],
+"loop": false,
+"name": &"BREAK",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yx5e6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BIG JAR" type="Node2D"]
+script = ExtResource("1_rlfof")
+scenetoinstantiate = ExtResource("2_doad5")
+
+[node name="Laser" parent="." instance=ExtResource("4_7twig")]
+position = Vector2(0, 28)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_lb4xr")
+animation = &"BREAK"
+autoplay = "idle"
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

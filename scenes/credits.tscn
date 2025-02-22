@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://8475q5n2fu4b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p14v8"]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 120.0
+offset_right = 434.0
+offset_bottom = 243.0
+text = "Credits:
+notrocketscientist,
+upsideout
+"
+label_settings = SubResource("LabelSettings_p14v8")
+horizontal_alignment = 1
+vertical_alignment = 1

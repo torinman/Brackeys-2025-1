@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp7l6u40jeobu"]
+
+[ext_resource type="Texture2D" uid="uid://bswscpidvh0ve" path="res://textures/purple thingies v1 leofixthisplease.png" id="1_0s0h0"]
+[ext_resource type="Script" path="res://scenes/big_smash.gd" id="1_wcvp7"]
+
+[sub_resource type="Gradient" id="Gradient_xtlxb"]
+offsets = PackedFloat32Array(0.558442, 0.707792)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0.631373, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8ui43"]
+gradient = SubResource("Gradient_xtlxb")
+fill = 1
+fill_from = Vector2(0.504587, 0.490826)
+
+[node name="BIG SMASH" type="Node2D"]
+script = ExtResource("1_wcvp7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 5000
+lifetime = 3.0
+texture = ExtResource("1_0s0h0")
+emission_shape = 1
+emission_sphere_radius = 99.56
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 494.95
+initial_velocity_max = 494.95
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.234375, 0.238095)
+texture = SubResource("GradientTexture2D_8ui43")
