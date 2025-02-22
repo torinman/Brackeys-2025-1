@@ -3,5 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://dsynj1hnndfsl" path="res://scenes/employerscene1.tscn" id="1_ttt2w"]
 
 [node name="AnimatedSprite2D" instance=ExtResource("1_ttt2w")]
-nextlevel = "res://level_5.tscn"
+nextlevel = "res://scenes/levels/level_5.tscn"
 day = "day4"

@@ -3,13 +3,15 @@ extends Node2D
 @onready var ray = $RayCast2D
 @onready var line = $Line2D
 @onready var lab = $Label
-@export var on = true
+@export var on_start = true
+var on = on_start
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	line.points.clear()
 	line.show()
 	line.add_point(ray.position)
 	line.add_point(ray.target_position)
+	turn_off()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,4 +28,10 @@ func _process(delta):
 				get_tree().reload_current_scene()
 	else:
 		line.default_color = Color.TRANSPARENT
-		
+
+
+func turn_on():
+	on = not on_start
+
+func turn_off():
+	on = on_start

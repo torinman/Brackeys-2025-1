@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://darencekaiigm"]
+[gd_scene load_steps=2 format=3 uid="uid://darencekaiigm"]
 
-[ext_resource type="PackedScene" uid="uid://d25mentlkp5m5" path="res://scenes/employerscene1.tscn" id="1_jl60r"]
-[ext_resource type="Script" path="res://employerscene6.gd" id="2_wlc80"]
+[ext_resource type="PackedScene" uid="uid://dsynj1hnndfsl" path="res://scenes/employerscene1.tscn" id="1_jl60r"]
 
 [node name="AnimatedSprite2D" instance=ExtResource("1_jl60r")]
-script = ExtResource("2_wlc80")
+nextlevel = "res://scenes/levels/level_7.tscn"
+day = "day6"

@@ -11,8 +11,8 @@
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="9_75u1x"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_6if8k"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_vsodw"]
-[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="12_opp87"]
-[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="13_ou33k"]
+[ext_resource type="PackedScene" uid="uid://cgk7l3w7n1pcn" path="res://scenes/bigfloor.tscn" id="12_opp87"]
+[ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="13_ou33k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2i57"]
 atlas = ExtResource("3_4u68l")

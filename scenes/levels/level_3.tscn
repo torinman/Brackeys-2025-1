@@ -15,10 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="14_waw1k"]
 [ext_resource type="Texture2D" uid="uid://dgl5exlw64f1g" path="res://floor.png" id="16_8ojjd"]
 [ext_resource type="Texture2D" uid="uid://2ectmlyll1x7" path="res://bigfloor.png" id="17_ai7u7"]
-[ext_resource type="PackedScene" uid="uid://blka88gncfig2" path="res://scenes/floor.tscn" id="17_el5mr"]
+[ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="17_el5mr"]
 [ext_resource type="Texture2D" uid="uid://cmt02jmom04u7" path="res://textures/jarstandtop.png" id="18_cafya"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="19_y7ktv"]
-[ext_resource type="PackedScene" uid="uid://crbxt7vc5tjb7" path="res://scenes/bigfloor.tscn" id="21_rqph4"]
+[ext_resource type="PackedScene" uid="uid://cgk7l3w7n1pcn" path="res://scenes/bigfloor.tscn" id="21_rqph4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bpreq"]
 atlas = ExtResource("3_fkkqb")
@@ -35,6 +35,10 @@ region = Rect2(137, 19, 36, 44)
 [node name="Level 3" type="Node2D"]
 script = ExtResource("1_2x70h")
 nextlevel = "res://scenes/employerscene3.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(326, 280)
+texture = SubResource("AtlasTexture_bpreq")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -76,6 +80,11 @@ texture = ExtResource("4_e8n12")
 position = Vector2(285, 311)
 texture = ExtResource("4_e8n12")
 
+[node name="Jarstandmiddle8" type="Sprite2D" parent="."]
+position = Vector2(312, 231)
+rotation = 1.5708
+texture = ExtResource("4_e8n12")
+
 [node name="Jarstandbase2" type="Sprite2D" parent="."]
 position = Vector2(227, 310)
 texture = ExtResource("5_advrk")
@@ -92,10 +101,6 @@ texture = ExtResource("5_advrk")
 position = Vector2(324, 231)
 rotation = 1.5708
 texture = ExtResource("4_e8n12")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(326, 280)
-texture = SubResource("AtlasTexture_bpreq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(426, 276)
@@ -187,11 +192,6 @@ position = Vector2(506, 314)
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("17_el5mr")]
 position = Vector2(538, 282)
-
-[node name="Jarstandmiddle8" type="Sprite2D" parent="."]
-position = Vector2(312, 231)
-rotation = 1.5708
-texture = ExtResource("4_e8n12")
 
 [node name="Jar" parent="." instance=ExtResource("19_y7ktv")]
 position = Vector2(372, 273)
