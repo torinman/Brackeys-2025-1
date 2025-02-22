@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://7btodu22qe7s"]
+[gd_scene load_steps=22 format=3 uid="uid://7btodu22qe7s"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_2x70h"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_ts6bx"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cx3kwig5qokxr" path="res://scenes/box.tscn" id="13_a1gnc"]
 [ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="14_waw1k"]
 [ext_resource type="Texture2D" uid="uid://dgl5exlw64f1g" path="res://floor.png" id="16_8ojjd"]
-[ext_resource type="Texture2D" uid="uid://2ectmlyll1x7" path="res://bigfloor.png" id="17_ai7u7"]
 [ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="17_el5mr"]
 [ext_resource type="Texture2D" uid="uid://cmt02jmom04u7" path="res://textures/jarstandtop.png" id="18_cafya"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="19_y7ktv"]
@@ -45,27 +44,27 @@ position = Vector2(320, 180)
 texture = ExtResource("2_ts6bx")
 
 [node name="Jarstandtop" type="Sprite2D" parent="."]
-position = Vector2(228, 299)
+position = Vector2(228, 302)
 texture = ExtResource("18_cafya")
 
 [node name="Jarstandtop2" type="Sprite2D" parent="."]
-position = Vector2(285, 299)
+position = Vector2(285, 302)
 texture = ExtResource("18_cafya")
 
 [node name="Jarstandtop3" type="Sprite2D" parent="."]
-position = Vector2(256, 299)
+position = Vector2(256, 302)
 texture = ExtResource("18_cafya")
 
 [node name="Jarstandmiddle2" type="Sprite2D" parent="."]
-position = Vector2(228, 299)
+position = Vector2(228, 302)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle3" type="Sprite2D" parent="."]
-position = Vector2(255, 299)
+position = Vector2(255, 302)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle4" type="Sprite2D" parent="."]
-position = Vector2(285, 299)
+position = Vector2(285, 302)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle5" type="Sprite2D" parent="."]
@@ -81,7 +80,7 @@ position = Vector2(285, 311)
 texture = ExtResource("4_e8n12")
 
 [node name="Jarstandmiddle8" type="Sprite2D" parent="."]
-position = Vector2(312, 231)
+position = Vector2(312, 234)
 rotation = 1.5708
 texture = ExtResource("4_e8n12")
 
@@ -98,7 +97,7 @@ position = Vector2(285, 310)
 texture = ExtResource("5_advrk")
 
 [node name="Jarstandmiddle9" type="Sprite2D" parent="."]
-position = Vector2(324, 231)
+position = Vector2(324, 234)
 rotation = 1.5708
 texture = ExtResource("4_e8n12")
 
@@ -152,25 +151,17 @@ texture = ExtResource("5_advrk")
 position = Vector2(157, 314)
 texture = ExtResource("16_8ojjd")
 
-[node name="Bigfloor" type="Sprite2D" parent="."]
-position = Vector2(273, 247)
-texture = ExtResource("17_ai7u7")
-
-[node name="Floor2" type="Sprite2D" parent="."]
-position = Vector2(225, 263)
-texture = ExtResource("16_8ojjd")
-
 [node name="StaticBody2D" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(341, 231)
+position = Vector2(341, 234)
 
 [node name="Box" parent="." instance=ExtResource("13_a1gnc")]
-position = Vector2(289, 199)
+position = Vector2(289, 202)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("21_rqph4")]
-position = Vector2(273, 247)
+position = Vector2(273, 250)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("17_el5mr")]
-position = Vector2(225, 263)
+position = Vector2(225, 266)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("17_el5mr")]
 position = Vector2(157, 314)
