@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvw1dk8vef1m4"]
 
 [ext_resource type="Script" path="res://scenes/laserer.gd" id="1_f1qko"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kvqmh"]
-size = Vector2(16, 16)
+[ext_resource type="Texture2D" uid="uid://btngdtgyovpjj" path="res://lazeremitter.png" id="2_js6v0"]
 
 [node name="Laserer" type="Node2D"]
 script = ExtResource("1_f1qko")
@@ -24,4 +22,4 @@ offset_bottom = 24.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
-texture = SubResource("PlaceholderTexture2D_kvqmh")
+texture = ExtResource("2_js6v0")
