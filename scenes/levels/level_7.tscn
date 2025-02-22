@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ceunjj83qhnqn"]
+[gd_scene load_steps=14 format=3 uid="uid://ceunjj83qhnqn"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_switcher.gd" id="1_k8kin"]
 [ext_resource type="Texture2D" uid="uid://dv3q867nacr0x" path="res://textures/Background.png" id="2_b8ild"]
@@ -11,8 +11,6 @@
 [ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="9_75u1x"]
 [ext_resource type="PackedScene" uid="uid://duob7t0ku6fxr" path="res://scenes/jar.tscn" id="10_6if8k"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_vsodw"]
-[ext_resource type="PackedScene" uid="uid://cgk7l3w7n1pcn" path="res://scenes/bigfloor.tscn" id="12_opp87"]
-[ext_resource type="PackedScene" uid="uid://ddbd17iisx17" path="res://scenes/floor.tscn" id="13_ou33k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2i57"]
 atlas = ExtResource("3_4u68l")
@@ -39,14 +37,17 @@ position = Vector2(575, 258)
 texture = SubResource("AtlasTexture_ob31l")
 
 [node name="Jarstand" parent="." instance=ExtResource("4_a24x4")]
-position = Vector2(518, 308)
+position = Vector2(316, 288)
+scale = Vector2(2, 2)
 
 [node name="Jarstandmiddle" type="Sprite2D" parent="."]
-position = Vector2(518, 308)
+position = Vector2(316, 288)
+scale = Vector2(2, 2)
 texture = ExtResource("5_2bfn4")
 
 [node name="Jarstandbase" type="Sprite2D" parent="."]
-position = Vector2(518, 308)
+position = Vector2(316, 288)
+scale = Vector2(2, 2)
 texture = ExtResource("6_p0skx")
 
 [node name="player" parent="." instance=ExtResource("7_sxxj1")]
@@ -58,7 +59,7 @@ autoplay = true
 script = ExtResource("9_75u1x")
 
 [node name="Jar" parent="." instance=ExtResource("10_6if8k")]
-position = Vector2(518, 269)
+position = Vector2(315, 230)
 
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
@@ -69,11 +70,5 @@ texture = ExtResource("11_vsodw")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frame/FrameBody"]
 position = Vector2(-1, -2)
 polygon = PackedVector2Array(-319, -178, -297, -156, -297, 152, 299, 152, 299, -156, -296, -156, -317, -177, 321, -177, 321, 183, -319, 183)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("12_opp87")]
-position = Vector2(341, 296)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("13_ou33k")]
-position = Vector2(293, 312)
 
 [connection signal="tree_exiting" from="Jar" to="AudioStreamPlayer2D" method="_on_jar_tree_exiting"]
