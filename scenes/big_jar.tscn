@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://btq7uq64g3eko" path="res://scenes/big_smash.tscn" id="2_doad5"]
 [ext_resource type="Texture2D" uid="uid://yegtpt1gc8a5" path="res://bigjarcracking.png" id="2_qbqhk"]
 [ext_resource type="Texture2D" uid="uid://d2iymjigbuvjb" path="res://bigjar.png" id="3_yx5e6"]
-[ext_resource type="PackedScene" path="res://scenes/big_laser.tscn" id="4_7twig"]
+[ext_resource type="PackedScene" uid="uid://4uq4h3qnsvwr" path="res://scenes/big_laser.tscn" id="4_7twig"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvmmo"]
 atlas = ExtResource("2_qbqhk")
