@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dp7l6u40jeobu"]
+[gd_scene load_steps=6 format=3 uid="uid://btq7uq64g3eko"]
 
 [ext_resource type="Texture2D" uid="uid://bswscpidvh0ve" path="res://textures/purple thingies v1 leofixthisplease.png" id="1_0s0h0"]
 [ext_resource type="Script" path="res://scenes/big_smash.gd" id="1_wcvp7"]
@@ -40,5 +40,5 @@ texture = SubResource("GradientTexture2D_8ui43")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_opthv")
-volume_db = 4.952
+volume_db = -1.607
 autoplay = true

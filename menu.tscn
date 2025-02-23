@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca0br5s1de8w2"]
+[gd_scene load_steps=9 format=3 uid="uid://ca0br5s1de8w2"]
 
 [ext_resource type="Texture2D" uid="uid://dxckop4ok4iyk" path="res://Thumbnailmuseum.png" id="1_ys32s"]
 [ext_resource type="Script" path="res://menu.gd" id="2_f6xph"]
 [ext_resource type="Texture2D" uid="uid://dwiy8w8y7jh6i" path="res://title.png" id="3_ykydc"]
 [ext_resource type="FontFile" uid="uid://bd6ibcmuvjd3t" path="res://8*8pixelfont-2.ttf" id="4_lunbo"]
+[ext_resource type="AudioStream" uid="uid://bugkiwese5l7p" path="res://audio/music2.mp3" id="5_x3pne"]
+[ext_resource type="Script" path="res://scenes/levels/AudioStreamPlayer2D.gd" id="6_lichb"]
 
 [sub_resource type="Gradient" id="Gradient_60tjo"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -53,6 +55,11 @@ offset_right = -257.0
 offset_bottom = -71.0
 theme_override_fonts/font = ExtResource("4_lunbo")
 text = "QUIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x3pne")
+autoplay = true
+script = ExtResource("6_lichb")
 
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="play2" to="." method="_on_play_2_button_down"]

@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cu8hcqul8dhbc" path="res://textures/jarstandmiddle.png" id="5_2bfn4"]
 [ext_resource type="Texture2D" uid="uid://dvy2coxxryjyi" path="res://textures/jarstandbase.png" id="6_p0skx"]
 [ext_resource type="PackedScene" uid="uid://bpeu6jm4rwq7t" path="res://scenes/player.tscn" id="7_sxxj1"]
-[ext_resource type="PackedScene" uid="uid://cq43wjeeg3pes" path="res://scenes/big_jar.tscn" id="11_nhlmo"]
+[ext_resource type="PackedScene" path="res://scenes/big_jar.tscn" id="11_nhlmo"]
 [ext_resource type="Texture2D" uid="uid://d3f6q7oobn74g" path="res://textures/Frame.png" id="11_vsodw"]
 [ext_resource type="PackedScene" uid="uid://bvw1dk8vef1m4" path="res://scenes/laserer.tscn" id="12_xrgdn"]
-[ext_resource type="PackedScene" uid="uid://bwwjy3ia35ah" path="res://scenes/big_button.tscn" id="13_cfppd"]
+[ext_resource type="PackedScene" path="res://scenes/big_button.tscn" id="13_cfppd"]
 [ext_resource type="PackedScene" uid="uid://cgk7l3w7n1pcn" path="res://scenes/bigfloor.tscn" id="14_f1bij"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2i57"]
